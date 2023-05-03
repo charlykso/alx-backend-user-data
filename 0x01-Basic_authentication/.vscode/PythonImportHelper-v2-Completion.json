@@ -277,12 +277,29 @@
         "documentation": {}
     },
     {
+        "label": "BasicAuth",
+        "importPath": "api.v1.auth.basic_auth",
+        "description": "api.v1.auth.basic_auth",
+        "isExtraImport": true,
+        "detail": "api.v1.auth.basic_auth",
+        "documentation": {}
+    },
+    {
         "label": "Auth",
         "kind": 6,
         "importPath": "api.v1.auth.auth",
         "description": "api.v1.auth.auth",
         "peekOfCode": "class Auth:\n    \"\"\"\n    Implementing the Auth class\n    \"\"\"\n    def require_auth(self, path: str, excluded_paths: List[str]) -> bool:\n        \"\"\"\n        Check if path requires authentication\n        Return bool value\n        \"\"\"\n        if path is None:",
         "detail": "api.v1.auth.auth",
+        "documentation": {}
+    },
+    {
+        "label": "BasicAuth",
+        "kind": 6,
+        "importPath": "api.v1.auth.basic_auth",
+        "description": "api.v1.auth.basic_auth",
+        "peekOfCode": "class BasicAuth:\n    \"\"\"Basic auth class\"\"\"\n    def extract_base64_authorization_header(self,\n                                            authorization_header: str) -> str:\n        \"\"\"\n        returns the Base64 part of the Authorization header\n        for a Basic Authentication\n        \"\"\"\n        if type(authorization_header) is not str or\\\n                authorization_header is None:",
+        "detail": "api.v1.auth.basic_auth",
         "documentation": {}
     },
     {
@@ -481,6 +498,15 @@
         "description": "main_1",
         "peekOfCode": "a = Auth()\nprint(a.require_auth(None, None))\nprint(a.require_auth(None, []))\nprint(a.require_auth(\"/api/v1/status/\", []))\nprint(a.require_auth(\"/api/v1/status/\", [\"/api/v1/status/\"]))\nprint(a.require_auth(\"/api/v1/status\", [\"/api/v1/status/\"]))\nprint(a.require_auth(\"/api/v1/users\", [\"/api/v1/status/\"]))\nprint(a.require_auth(\"/api/v1/users\", [\"/api/v1/status/\", \"/api/v1/stats\"]))",
         "detail": "main_1",
+        "documentation": {}
+    },
+    {
+        "label": "a",
+        "kind": 5,
+        "importPath": "main_2",
+        "description": "main_2",
+        "peekOfCode": "a = BasicAuth()\nprint(a.extract_base64_authorization_header(None))\nprint(a.extract_base64_authorization_header(89))\nprint(a.extract_base64_authorization_header(\"Holberton School\"))\nprint(a.extract_base64_authorization_header(\"Basic Holberton\"))\nprint(a.extract_base64_authorization_header(\"Basic SG9sYmVydG9u\"))\nprint(a.extract_base64_authorization_header(\"Basic SG9sYmVydG9uIFNjaG9vbA==\"))\nprint(a.extract_base64_authorization_header(\"Basic1234\"))",
+        "detail": "main_2",
         "documentation": {}
     }
 ]
