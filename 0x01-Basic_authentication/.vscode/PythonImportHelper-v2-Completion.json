@@ -242,7 +242,16 @@
         "kind": 2,
         "importPath": "api.v1.views.index",
         "description": "api.v1.views.index",
-        "peekOfCode": "def unauthorized():\n    \"\"\"\n    testing 401 error handler\n    \"\"\"\n    abort(401)",
+        "peekOfCode": "def unauthorized():\n    \"\"\"\n    testing 401 error handler\n    \"\"\"\n    abort(401)\n@app_views.route('/forbidden', strict_slashes=False)\ndef forbidden():\n    \"\"\"\n    testing 403 error handler\n    \"\"\"",
+        "detail": "api.v1.views.index",
+        "documentation": {}
+    },
+    {
+        "label": "forbidden",
+        "kind": 2,
+        "importPath": "api.v1.views.index",
+        "description": "api.v1.views.index",
+        "peekOfCode": "def forbidden():\n    \"\"\"\n    testing 403 error handler\n    \"\"\"\n    abort(403)",
         "detail": "api.v1.views.index",
         "documentation": {}
     },
@@ -305,7 +314,16 @@
         "kind": 2,
         "importPath": "api.v1.app",
         "description": "api.v1.app",
-        "peekOfCode": "def unauthorized(error) -> str:\n    \"\"\"\n    unauthorized handler\n    \"\"\"\n    return jsonify({\"error\": \"Unauthorized\"}), 401\nif __name__ == \"__main__\":\n    host = getenv(\"API_HOST\", \"0.0.0.0\")\n    port = getenv(\"API_PORT\", \"5000\")\n    app.run(host=host, port=port, debug=True)",
+        "peekOfCode": "def unauthorized(error) -> str:\n    \"\"\"\n    unauthorized handler\n    \"\"\"\n    return jsonify({\"error\": \"Unauthorized\"}), 401\n@app.errorhandler(403)\ndef forbidden(error) -> str:\n    \"\"\"\n    forbidden handler\n    \"\"\"",
+        "detail": "api.v1.app",
+        "documentation": {}
+    },
+    {
+        "label": "forbidden",
+        "kind": 2,
+        "importPath": "api.v1.app",
+        "description": "api.v1.app",
+        "peekOfCode": "def forbidden(error) -> str:\n    \"\"\"\n    forbidden handler\n    \"\"\"\n    return jsonify({\"error\": \"Forbidden\"}), 403\nif __name__ == \"__main__\":\n    host = getenv(\"API_HOST\", \"0.0.0.0\")\n    port = getenv(\"API_PORT\", \"5000\")\n    app.run(host=host, port=port, debug=True)",
         "detail": "api.v1.app",
         "documentation": {}
     },
