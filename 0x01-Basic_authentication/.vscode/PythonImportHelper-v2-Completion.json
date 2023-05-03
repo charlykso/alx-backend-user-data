@@ -238,11 +238,11 @@
         "documentation": {}
     },
     {
-        "label": "error_test",
+        "label": "unauthorized",
         "kind": 2,
         "importPath": "api.v1.views.index",
         "description": "api.v1.views.index",
-        "peekOfCode": "def error_test():\n  \"\"\"\n  testing 401 error handler\n  \"\"\"\n  abort(401)",
+        "peekOfCode": "def unauthorized():\n  \"\"\"\n  testing 401 error handler\n  \"\"\"\n  abort(401)",
         "detail": "api.v1.views.index",
         "documentation": {}
     },
