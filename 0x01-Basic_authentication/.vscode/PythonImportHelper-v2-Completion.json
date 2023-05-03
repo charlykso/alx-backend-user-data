@@ -137,6 +137,24 @@
         "documentation": {}
     },
     {
+        "label": "base64",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "base64",
+        "description": "base64",
+        "detail": "base64",
+        "documentation": {}
+    },
+    {
+        "label": "binascii",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "binascii",
+        "description": "binascii",
+        "detail": "binascii",
+        "documentation": {}
+    },
+    {
         "label": "app_views",
         "importPath": "api.v1.views",
         "description": "api.v1.views",
@@ -274,6 +292,14 @@
         "description": "models.base",
         "isExtraImport": true,
         "detail": "models.base",
+        "documentation": {}
+    },
+    {
+        "label": "BasicAuth",
+        "importPath": "api.v1.auth.basic_auth",
+        "description": "api.v1.auth.basic_auth",
+        "isExtraImport": true,
+        "detail": "api.v1.auth.basic_auth",
         "documentation": {}
     },
     {
@@ -507,6 +533,15 @@
         "description": "main_2",
         "peekOfCode": "a = BasicAuth()\nprint(a.extract_base64_authorization_header(None))\nprint(a.extract_base64_authorization_header(89))\nprint(a.extract_base64_authorization_header(\"Holberton School\"))\nprint(a.extract_base64_authorization_header(\"Basic Holberton\"))\nprint(a.extract_base64_authorization_header(\"Basic SG9sYmVydG9u\"))\nprint(a.extract_base64_authorization_header(\"Basic SG9sYmVydG9uIFNjaG9vbA==\"))\nprint(a.extract_base64_authorization_header(\"Basic1234\"))",
         "detail": "main_2",
+        "documentation": {}
+    },
+    {
+        "label": "a",
+        "kind": 5,
+        "importPath": "main_3",
+        "description": "main_3",
+        "peekOfCode": "a = BasicAuth()\nprint(a.decode_base64_authorization_header(None))\nprint(a.decode_base64_authorization_header(89))\nprint(a.decode_base64_authorization_header(\"Holberton School\"))\nprint(a.decode_base64_authorization_header(\"SG9sYmVydG9u\"))\nprint(a.decode_base64_authorization_header(\"SG9sYmVydG9uIFNjaG9vbA==\"))\nprint(a.decode_base64_authorization_header(a.extract_base64_authorization_header(\"Basic SG9sYmVydG9uIFNjaG9vbA==\")))",
+        "detail": "main_3",
         "documentation": {}
     }
 ]
