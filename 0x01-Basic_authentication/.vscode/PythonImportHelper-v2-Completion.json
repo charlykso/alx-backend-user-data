@@ -233,7 +233,16 @@
         "kind": 2,
         "importPath": "api.v1.views.index",
         "description": "api.v1.views.index",
-        "peekOfCode": "def stats() -> str:\n    \"\"\" GET /api/v1/stats\n    Return:\n      - the number of each objects\n    \"\"\"\n    from models.user import User\n    stats = {}\n    stats['users'] = User.count()\n    return jsonify(stats)",
+        "peekOfCode": "def stats() -> str:\n    \"\"\" GET /api/v1/stats\n    Return:\n      - the number of each objects\n    \"\"\"\n    from models.user import User\n    stats = {}\n    stats['users'] = User.count()\n    return jsonify(stats)\n@app_views.route('/unauthorized', methods=['GET'],",
+        "detail": "api.v1.views.index",
+        "documentation": {}
+    },
+    {
+        "label": "error_test",
+        "kind": 2,
+        "importPath": "api.v1.views.index",
+        "description": "api.v1.views.index",
+        "peekOfCode": "def error_test():\n  \"\"\"\n  testing 401 error handler\n  \"\"\"\n  abort(401)",
         "detail": "api.v1.views.index",
         "documentation": {}
     },
@@ -287,7 +296,16 @@
         "kind": 2,
         "importPath": "api.v1.app",
         "description": "api.v1.app",
-        "peekOfCode": "def not_found(error) -> str:\n    \"\"\" Not found handler\n    \"\"\"\n    return jsonify({\"error\": \"Not found\"}), 404\nif __name__ == \"__main__\":\n    host = getenv(\"API_HOST\", \"0.0.0.0\")\n    port = getenv(\"API_PORT\", \"5000\")\n    app.run(host=host, port=port, debug=True)",
+        "peekOfCode": "def not_found(error) -> str:\n    \"\"\" Not found handler\n    \"\"\"\n    return jsonify({\"error\": \"Not found\"}), 404\n@app.errorhandler(401)\ndef unauthorized(error) -> str:\n    \"\"\"\n    unauthorized handler\n    \"\"\"\n    return jsonify({\"error\": \"Unauthorized\"}), 401",
+        "detail": "api.v1.app",
+        "documentation": {}
+    },
+    {
+        "label": "unauthorized",
+        "kind": 2,
+        "importPath": "api.v1.app",
+        "description": "api.v1.app",
+        "peekOfCode": "def unauthorized(error) -> str:\n    \"\"\"\n    unauthorized handler\n    \"\"\"\n    return jsonify({\"error\": \"Unauthorized\"}), 401\nif __name__ == \"__main__\":\n    host = getenv(\"API_HOST\", \"0.0.0.0\")\n    port = getenv(\"API_PORT\", \"5000\")\n    app.run(host=host, port=port, debug=True)",
         "detail": "api.v1.app",
         "documentation": {}
     },
@@ -296,7 +314,7 @@
         "kind": 5,
         "importPath": "api.v1.app",
         "description": "api.v1.app",
-        "peekOfCode": "app = Flask(__name__)\napp.register_blueprint(app_views)\nCORS(app, resources={r\"/api/v1/*\": {\"origins\": \"*\"}})\n@app.errorhandler(404)\ndef not_found(error) -> str:\n    \"\"\" Not found handler\n    \"\"\"\n    return jsonify({\"error\": \"Not found\"}), 404\nif __name__ == \"__main__\":\n    host = getenv(\"API_HOST\", \"0.0.0.0\")",
+        "peekOfCode": "app = Flask(__name__)\napp.register_blueprint(app_views)\nCORS(app, resources={r\"/api/v1/*\": {\"origins\": \"*\"}})\n@app.errorhandler(404)\ndef not_found(error) -> str:\n    \"\"\" Not found handler\n    \"\"\"\n    return jsonify({\"error\": \"Not found\"}), 404\n@app.errorhandler(401)\ndef unauthorized(error) -> str:",
         "detail": "api.v1.app",
         "documentation": {}
     },
