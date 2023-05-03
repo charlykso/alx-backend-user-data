@@ -1,0 +1,339 @@
+[
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "abort",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "abort",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "abort",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "app_views",
+        "importPath": "api.v1.views",
+        "description": "api.v1.views",
+        "isExtraImport": true,
+        "detail": "api.v1.views",
+        "documentation": {}
+    },
+    {
+        "label": "app_views",
+        "importPath": "api.v1.views",
+        "description": "api.v1.views",
+        "isExtraImport": true,
+        "detail": "api.v1.views",
+        "documentation": {}
+    },
+    {
+        "label": "app_views",
+        "importPath": "api.v1.views",
+        "description": "api.v1.views",
+        "isExtraImport": true,
+        "detail": "api.v1.views",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "models.user",
+        "description": "models.user",
+        "isExtraImport": true,
+        "detail": "models.user",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "TypeVar",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Iterable",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "getenv",
+        "importPath": "os",
+        "description": "os",
+        "isExtraImport": true,
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "os",
+        "description": "os",
+        "isExtraImport": true,
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "CORS",
+        "importPath": "flask_cors",
+        "description": "flask_cors",
+        "isExtraImport": true,
+        "detail": "flask_cors",
+        "documentation": {}
+    },
+    {
+        "label": "cross_origin",
+        "importPath": "flask_cors",
+        "description": "flask_cors",
+        "isExtraImport": true,
+        "detail": "flask_cors",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "uuid",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "uuid",
+        "description": "uuid",
+        "detail": "uuid",
+        "documentation": {}
+    },
+    {
+        "label": "hashlib",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "hashlib",
+        "description": "hashlib",
+        "detail": "hashlib",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "models.base",
+        "description": "models.base",
+        "isExtraImport": true,
+        "detail": "models.base",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "kind": 2,
+        "importPath": "api.v1.views.index",
+        "description": "api.v1.views.index",
+        "peekOfCode": "def status() -> str:\n    \"\"\" GET /api/v1/status\n    Return:\n      - the status of the API\n    \"\"\"\n    return jsonify({\"status\": \"OK\"})\n@app_views.route('/stats/', strict_slashes=False)\ndef stats() -> str:\n    \"\"\" GET /api/v1/stats\n    Return:",
+        "detail": "api.v1.views.index",
+        "documentation": {}
+    },
+    {
+        "label": "stats",
+        "kind": 2,
+        "importPath": "api.v1.views.index",
+        "description": "api.v1.views.index",
+        "peekOfCode": "def stats() -> str:\n    \"\"\" GET /api/v1/stats\n    Return:\n      - the number of each objects\n    \"\"\"\n    from models.user import User\n    stats = {}\n    stats['users'] = User.count()\n    return jsonify(stats)",
+        "detail": "api.v1.views.index",
+        "documentation": {}
+    },
+    {
+        "label": "view_all_users",
+        "kind": 2,
+        "importPath": "api.v1.views.users",
+        "description": "api.v1.views.users",
+        "peekOfCode": "def view_all_users() -> str:\n    \"\"\" GET /api/v1/users\n    Return:\n      - list of all User objects JSON represented\n    \"\"\"\n    all_users = [user.to_json() for user in User.all()]\n    return jsonify(all_users)\n@app_views.route('/users/<user_id>', methods=['GET'], strict_slashes=False)\ndef view_one_user(user_id: str = '') -> str:\n    \"\"\" GET /api/v1/users/:id",
+        "detail": "api.v1.views.users",
+        "documentation": {}
+    },
+    {
+        "label": "view_one_user",
+        "kind": 2,
+        "importPath": "api.v1.views.users",
+        "description": "api.v1.views.users",
+        "peekOfCode": "def view_one_user(user_id: str = '') -> str:\n    \"\"\" GET /api/v1/users/:id\n    Path parameter:\n      - User ID\n    Return:\n      - User object JSON represented\n      - 404 if the User ID doesn't exist\n    \"\"\"\n    if user_id is None:\n        abort(404)",
+        "detail": "api.v1.views.users",
+        "documentation": {}
+    },
+    {
+        "label": "delete_user",
+        "kind": 2,
+        "importPath": "api.v1.views.users",
+        "description": "api.v1.views.users",
+        "peekOfCode": "def delete_user(user_id: str = '') -> str:\n    \"\"\" DELETE /api/v1/users/:id\n    Path parameter:\n      - User ID\n    Return:\n      - empty JSON is the User has been correctly deleted\n      - 404 if the User ID doesn't exist\n    \"\"\"\n    if user_id is None:\n        abort(404)",
+        "detail": "api.v1.views.users",
+        "documentation": {}
+    },
+    {
+        "label": "create_user",
+        "kind": 2,
+        "importPath": "api.v1.views.users",
+        "description": "api.v1.views.users",
+        "peekOfCode": "def create_user() -> str:\n    \"\"\" POST /api/v1/users/\n    JSON body:\n      - email\n      - password\n      - last_name (optional)\n      - first_name (optional)\n    Return:\n      - User object JSON represented\n      - 400 if can't create the new User",
+        "detail": "api.v1.views.users",
+        "documentation": {}
+    },
+    {
+        "label": "update_user",
+        "kind": 2,
+        "importPath": "api.v1.views.users",
+        "description": "api.v1.views.users",
+        "peekOfCode": "def update_user(user_id: str = None) -> str:\n    \"\"\" PUT /api/v1/users/:id\n    Path parameter:\n      - User ID\n    JSON body:\n      - last_name (optional)\n      - first_name (optional)\n    Return:\n      - User object JSON represented\n      - 404 if the User ID doesn't exist",
+        "detail": "api.v1.views.users",
+        "documentation": {}
+    },
+    {
+        "label": "not_found",
+        "kind": 2,
+        "importPath": "api.v1.app",
+        "description": "api.v1.app",
+        "peekOfCode": "def not_found(error) -> str:\n    \"\"\" Not found handler\n    \"\"\"\n    return jsonify({\"error\": \"Not found\"}), 404\nif __name__ == \"__main__\":\n    host = getenv(\"API_HOST\", \"0.0.0.0\")\n    port = getenv(\"API_PORT\", \"5000\")\n    app.run(host=host, port=port, debug=True)",
+        "detail": "api.v1.app",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "api.v1.app",
+        "description": "api.v1.app",
+        "peekOfCode": "app = Flask(__name__)\napp.register_blueprint(app_views)\nCORS(app, resources={r\"/api/v1/*\": {\"origins\": \"*\"}})\n@app.errorhandler(404)\ndef not_found(error) -> str:\n    \"\"\" Not found handler\n    \"\"\"\n    return jsonify({\"error\": \"Not found\"}), 404\nif __name__ == \"__main__\":\n    host = getenv(\"API_HOST\", \"0.0.0.0\")",
+        "detail": "api.v1.app",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "kind": 6,
+        "importPath": "models.base",
+        "description": "models.base",
+        "peekOfCode": "class Base():\n    \"\"\" Base class\n    \"\"\"\n    def __init__(self, *args: list, **kwargs: dict):\n        \"\"\" Initialize a Base instance\n        \"\"\"\n        s_class = str(self.__class__.__name__)\n        if DATA.get(s_class) is None:\n            DATA[s_class] = {}\n        self.id = kwargs.get('id', str(uuid.uuid4()))",
+        "detail": "models.base",
+        "documentation": {}
+    },
+    {
+        "label": "TIMESTAMP_FORMAT",
+        "kind": 5,
+        "importPath": "models.base",
+        "description": "models.base",
+        "peekOfCode": "TIMESTAMP_FORMAT = \"%Y-%m-%dT%H:%M:%S\"\nDATA = {}\nclass Base():\n    \"\"\" Base class\n    \"\"\"\n    def __init__(self, *args: list, **kwargs: dict):\n        \"\"\" Initialize a Base instance\n        \"\"\"\n        s_class = str(self.__class__.__name__)\n        if DATA.get(s_class) is None:",
+        "detail": "models.base",
+        "documentation": {}
+    },
+    {
+        "label": "DATA",
+        "kind": 5,
+        "importPath": "models.base",
+        "description": "models.base",
+        "peekOfCode": "DATA = {}\nclass Base():\n    \"\"\" Base class\n    \"\"\"\n    def __init__(self, *args: list, **kwargs: dict):\n        \"\"\" Initialize a Base instance\n        \"\"\"\n        s_class = str(self.__class__.__name__)\n        if DATA.get(s_class) is None:\n            DATA[s_class] = {}",
+        "detail": "models.base",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "kind": 6,
+        "importPath": "models.user",
+        "description": "models.user",
+        "peekOfCode": "class User(Base):\n    \"\"\" User class\n    \"\"\"\n    def __init__(self, *args: list, **kwargs: dict):\n        \"\"\" Initialize a User instance\n        \"\"\"\n        super().__init__(*args, **kwargs)\n        self.email = kwargs.get('email')\n        self._password = kwargs.get('_password')\n        self.first_name = kwargs.get('first_name')",
+        "detail": "models.user",
+        "documentation": {}
+    }
+]
