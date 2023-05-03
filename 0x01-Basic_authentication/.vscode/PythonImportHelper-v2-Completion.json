@@ -113,6 +113,22 @@
         "documentation": {}
     },
     {
+        "label": "Tuple",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "TypeVar",
         "importPath": "typing",
         "description": "typing",
@@ -292,6 +308,14 @@
         "description": "models.base",
         "isExtraImport": true,
         "detail": "models.base",
+        "documentation": {}
+    },
+    {
+        "label": "BasicAuth",
+        "importPath": "api.v1.auth.basic_auth",
+        "description": "api.v1.auth.basic_auth",
+        "isExtraImport": true,
+        "detail": "api.v1.auth.basic_auth",
         "documentation": {}
     },
     {
@@ -542,6 +566,15 @@
         "description": "main_3",
         "peekOfCode": "a = BasicAuth()\nprint(a.decode_base64_authorization_header(None))\nprint(a.decode_base64_authorization_header(89))\nprint(a.decode_base64_authorization_header(\"Holberton School\"))\nprint(a.decode_base64_authorization_header(\"SG9sYmVydG9u\"))\nprint(a.decode_base64_authorization_header(\"SG9sYmVydG9uIFNjaG9vbA==\"))\nprint(a.decode_base64_authorization_header(a.extract_base64_authorization_header(\"Basic SG9sYmVydG9uIFNjaG9vbA==\")))",
         "detail": "main_3",
+        "documentation": {}
+    },
+    {
+        "label": "a",
+        "kind": 5,
+        "importPath": "main_4",
+        "description": "main_4",
+        "peekOfCode": "a = BasicAuth()\nprint(a.extract_user_credentials(None))\nprint(a.extract_user_credentials(89))\nprint(a.extract_user_credentials(\"Holberton School\"))\nprint(a.extract_user_credentials(\"Holberton:School\"))\nprint(a.extract_user_credentials(\"bob@gmail.com:toto1234\"))",
+        "detail": "main_4",
         "documentation": {}
     }
 ]
