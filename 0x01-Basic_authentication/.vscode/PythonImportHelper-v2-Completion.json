@@ -219,6 +219,30 @@
         "documentation": {}
     },
     {
+        "label": "Auth",
+        "importPath": "api.v1.auth.auth",
+        "description": "api.v1.auth.auth",
+        "isExtraImport": true,
+        "detail": "api.v1.auth.auth",
+        "documentation": {}
+    },
+    {
+        "label": "Auth",
+        "importPath": "api.v1.auth.auth",
+        "description": "api.v1.auth.auth",
+        "isExtraImport": true,
+        "detail": "api.v1.auth.auth",
+        "documentation": {}
+    },
+    {
+        "label": "Auth",
+        "importPath": "api.v1.auth.auth",
+        "description": "api.v1.auth.auth",
+        "isExtraImport": true,
+        "detail": "api.v1.auth.auth",
+        "documentation": {}
+    },
+    {
         "label": "datetime",
         "importPath": "datetime",
         "description": "datetime",
@@ -250,22 +274,6 @@
         "description": "models.base",
         "isExtraImport": true,
         "detail": "models.base",
-        "documentation": {}
-    },
-    {
-        "label": "Auth",
-        "importPath": "api.v1.auth.auth",
-        "description": "api.v1.auth.auth",
-        "isExtraImport": true,
-        "detail": "api.v1.auth.auth",
-        "documentation": {}
-    },
-    {
-        "label": "Auth",
-        "importPath": "api.v1.auth.auth",
-        "description": "api.v1.auth.auth",
-        "isExtraImport": true,
-        "detail": "api.v1.auth.auth",
         "documentation": {}
     },
     {
@@ -381,7 +389,16 @@
         "kind": 2,
         "importPath": "api.v1.app",
         "description": "api.v1.app",
-        "peekOfCode": "def forbidden(error) -> str:\n    \"\"\"\n    forbidden handler\n    \"\"\"\n    return jsonify({\"error\": \"Forbidden\"}), 403\nif __name__ == \"__main__\":\n    host = getenv(\"API_HOST\", \"0.0.0.0\")\n    port = getenv(\"API_PORT\", \"5000\")\n    app.run(host=host, port=port, debug=True)",
+        "peekOfCode": "def forbidden(error) -> str:\n    \"\"\"\n    forbidden handler\n    \"\"\"\n    return jsonify({\"error\": \"Forbidden\"}), 403\n@app.before_request\ndef authenticateUser():\n    \"\"\"\n    authenticate user method\n    \"\"\"",
+        "detail": "api.v1.app",
+        "documentation": {}
+    },
+    {
+        "label": "authenticateUser",
+        "kind": 2,
+        "importPath": "api.v1.app",
+        "description": "api.v1.app",
+        "peekOfCode": "def authenticateUser():\n    \"\"\"\n    authenticate user method\n    \"\"\"\n    path_list = [\n        '/api/v1/status/',\n        '/api/v1/unauthorized/',\n        '/api/v1/forbidden/'\n        ]\n    if auth is None:",
         "detail": "api.v1.app",
         "documentation": {}
     },
@@ -390,7 +407,25 @@
         "kind": 5,
         "importPath": "api.v1.app",
         "description": "api.v1.app",
-        "peekOfCode": "app = Flask(__name__)\napp.register_blueprint(app_views)\nCORS(app, resources={r\"/api/v1/*\": {\"origins\": \"*\"}})\n@app.errorhandler(404)\ndef not_found(error) -> str:\n    \"\"\" Not found handler\n    \"\"\"\n    return jsonify({\"error\": \"Not found\"}), 404\n@app.errorhandler(401)\ndef unauthorized(error) -> str:",
+        "peekOfCode": "app = Flask(__name__)\napp.register_blueprint(app_views)\nCORS(app, resources={r\"/api/v1/*\": {\"origins\": \"*\"}})\nauth = None\nauth_type = getenv('AUTH_TYPE', 'auth')\nif auth_type == 'auth':\n    auth = Auth()\n@app.errorhandler(404)\ndef not_found(error) -> str:\n    \"\"\" Not found handler",
+        "detail": "api.v1.app",
+        "documentation": {}
+    },
+    {
+        "label": "auth",
+        "kind": 5,
+        "importPath": "api.v1.app",
+        "description": "api.v1.app",
+        "peekOfCode": "auth = None\nauth_type = getenv('AUTH_TYPE', 'auth')\nif auth_type == 'auth':\n    auth = Auth()\n@app.errorhandler(404)\ndef not_found(error) -> str:\n    \"\"\" Not found handler\n    \"\"\"\n    return jsonify({\"error\": \"Not found\"}), 404\n@app.errorhandler(401)",
+        "detail": "api.v1.app",
+        "documentation": {}
+    },
+    {
+        "label": "auth_type",
+        "kind": 5,
+        "importPath": "api.v1.app",
+        "description": "api.v1.app",
+        "peekOfCode": "auth_type = getenv('AUTH_TYPE', 'auth')\nif auth_type == 'auth':\n    auth = Auth()\n@app.errorhandler(404)\ndef not_found(error) -> str:\n    \"\"\" Not found handler\n    \"\"\"\n    return jsonify({\"error\": \"Not found\"}), 404\n@app.errorhandler(401)\ndef unauthorized(error) -> str:",
         "detail": "api.v1.app",
         "documentation": {}
     },
