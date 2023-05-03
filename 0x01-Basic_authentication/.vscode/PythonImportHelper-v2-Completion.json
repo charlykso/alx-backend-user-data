@@ -233,7 +233,7 @@
         "kind": 2,
         "importPath": "api.v1.views.index",
         "description": "api.v1.views.index",
-        "peekOfCode": "def stats() -> str:\n    \"\"\" GET /api/v1/stats\n    Return:\n      - the number of each objects\n    \"\"\"\n    from models.user import User\n    stats = {}\n    stats['users'] = User.count()\n    return jsonify(stats)\n@app_views.route('/unauthorized', methods=['GET'],",
+        "peekOfCode": "def stats() -> str:\n    \"\"\" GET /api/v1/stats\n    Return:\n      - the number of each objects\n    \"\"\"\n    from models.user import User\n    stats = {}\n    stats['users'] = User.count()\n    return jsonify(stats)\n@app_views.route('/unauthorized', strict_slashes=False)",
         "detail": "api.v1.views.index",
         "documentation": {}
     },
@@ -242,7 +242,7 @@
         "kind": 2,
         "importPath": "api.v1.views.index",
         "description": "api.v1.views.index",
-        "peekOfCode": "def unauthorized():\n  \"\"\"\n  testing 401 error handler\n  \"\"\"\n  abort(401)",
+        "peekOfCode": "def unauthorized():\n    \"\"\"\n    testing 401 error handler\n    \"\"\"\n    abort(401)",
         "detail": "api.v1.views.index",
         "documentation": {}
     },
