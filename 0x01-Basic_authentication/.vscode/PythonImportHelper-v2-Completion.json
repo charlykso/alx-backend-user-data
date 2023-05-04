@@ -220,6 +220,14 @@
         "documentation": {}
     },
     {
+        "label": "User",
+        "importPath": "models.user",
+        "description": "models.user",
+        "isExtraImport": true,
+        "detail": "models.user",
+        "documentation": {}
+    },
+    {
         "label": "app_views",
         "importPath": "api.v1.views",
         "description": "api.v1.views",
@@ -315,6 +323,14 @@
         "description": "api.v1.auth.auth",
         "isExtraImport": true,
         "detail": "api.v1.auth.auth",
+        "documentation": {}
+    },
+    {
+        "label": "BasicAuth",
+        "importPath": "api.v1.auth.basic_auth",
+        "description": "api.v1.auth.basic_auth",
+        "isExtraImport": true,
+        "detail": "api.v1.auth.basic_auth",
         "documentation": {}
     },
     {
@@ -613,6 +629,60 @@
         "description": "main_1",
         "peekOfCode": "a = Auth()\nprint(a.require_auth(None, None))\nprint(a.require_auth(None, []))\nprint(a.require_auth(\"/api/v1/status/\", []))\nprint(a.require_auth(\"/api/v1/status/\", [\"/api/v1/status/\"]))\nprint(a.require_auth(\"/api/v1/status\", [\"/api/v1/status/\"]))\nprint(a.require_auth(\"/api/v1/users\", [\"/api/v1/status/\"]))\nprint(a.require_auth(\"/api/v1/users\", [\"/api/v1/status/\", \"/api/v1/stats\"]))",
         "detail": "main_1",
+        "documentation": {}
+    },
+    {
+        "label": "user_email",
+        "kind": 5,
+        "importPath": "main_100",
+        "description": "main_100",
+        "peekOfCode": "user_email = \"bob100@hbtn.io\"\nuser_clear_pwd = \"H0lberton:School:98!\"\nuser = User()\nuser.email = user_email\nuser.password = user_clear_pwd\nprint(\"New user: {}\".format(user.id))\nuser.save()\nbasic_clear = \"{}:{}\".format(user_email, user_clear_pwd)\nprint(\"Basic Base64: {}\".format(base64.b64encode(basic_clear.encode('utf-8')).decode(\"utf-8\")))",
+        "detail": "main_100",
+        "documentation": {}
+    },
+    {
+        "label": "user_clear_pwd",
+        "kind": 5,
+        "importPath": "main_100",
+        "description": "main_100",
+        "peekOfCode": "user_clear_pwd = \"H0lberton:School:98!\"\nuser = User()\nuser.email = user_email\nuser.password = user_clear_pwd\nprint(\"New user: {}\".format(user.id))\nuser.save()\nbasic_clear = \"{}:{}\".format(user_email, user_clear_pwd)\nprint(\"Basic Base64: {}\".format(base64.b64encode(basic_clear.encode('utf-8')).decode(\"utf-8\")))",
+        "detail": "main_100",
+        "documentation": {}
+    },
+    {
+        "label": "user",
+        "kind": 5,
+        "importPath": "main_100",
+        "description": "main_100",
+        "peekOfCode": "user = User()\nuser.email = user_email\nuser.password = user_clear_pwd\nprint(\"New user: {}\".format(user.id))\nuser.save()\nbasic_clear = \"{}:{}\".format(user_email, user_clear_pwd)\nprint(\"Basic Base64: {}\".format(base64.b64encode(basic_clear.encode('utf-8')).decode(\"utf-8\")))",
+        "detail": "main_100",
+        "documentation": {}
+    },
+    {
+        "label": "user.email",
+        "kind": 5,
+        "importPath": "main_100",
+        "description": "main_100",
+        "peekOfCode": "user.email = user_email\nuser.password = user_clear_pwd\nprint(\"New user: {}\".format(user.id))\nuser.save()\nbasic_clear = \"{}:{}\".format(user_email, user_clear_pwd)\nprint(\"Basic Base64: {}\".format(base64.b64encode(basic_clear.encode('utf-8')).decode(\"utf-8\")))",
+        "detail": "main_100",
+        "documentation": {}
+    },
+    {
+        "label": "user.password",
+        "kind": 5,
+        "importPath": "main_100",
+        "description": "main_100",
+        "peekOfCode": "user.password = user_clear_pwd\nprint(\"New user: {}\".format(user.id))\nuser.save()\nbasic_clear = \"{}:{}\".format(user_email, user_clear_pwd)\nprint(\"Basic Base64: {}\".format(base64.b64encode(basic_clear.encode('utf-8')).decode(\"utf-8\")))",
+        "detail": "main_100",
+        "documentation": {}
+    },
+    {
+        "label": "basic_clear",
+        "kind": 5,
+        "importPath": "main_100",
+        "description": "main_100",
+        "peekOfCode": "basic_clear = \"{}:{}\".format(user_email, user_clear_pwd)\nprint(\"Basic Base64: {}\".format(base64.b64encode(basic_clear.encode('utf-8')).decode(\"utf-8\")))",
+        "detail": "main_100",
         "documentation": {}
     },
     {
