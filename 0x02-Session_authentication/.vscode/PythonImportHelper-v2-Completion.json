@@ -1,0 +1,640 @@
+[
+    {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "flask",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "flask",
+        "description": "flask",
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "abort",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "abort",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "abort",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "TypeVar",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Tuple",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "TypeVar",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "TypeVar",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Iterable",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "base64",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "base64",
+        "description": "base64",
+        "detail": "base64",
+        "documentation": {}
+    },
+    {
+        "label": "binascii",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "binascii",
+        "description": "binascii",
+        "detail": "binascii",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "models.user",
+        "description": "models.user",
+        "isExtraImport": true,
+        "detail": "models.user",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "models.user",
+        "description": "models.user",
+        "isExtraImport": true,
+        "detail": "models.user",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "models.user",
+        "description": "models.user",
+        "isExtraImport": true,
+        "detail": "models.user",
+        "documentation": {}
+    },
+    {
+        "label": "Auth",
+        "importPath": "api.v1.auth.auth",
+        "description": "api.v1.auth.auth",
+        "isExtraImport": true,
+        "detail": "api.v1.auth.auth",
+        "documentation": {}
+    },
+    {
+        "label": "Auth",
+        "importPath": "api.v1.auth.auth",
+        "description": "api.v1.auth.auth",
+        "isExtraImport": true,
+        "detail": "api.v1.auth.auth",
+        "documentation": {}
+    },
+    {
+        "label": "app_views",
+        "importPath": "api.v1.views",
+        "description": "api.v1.views",
+        "isExtraImport": true,
+        "detail": "api.v1.views",
+        "documentation": {}
+    },
+    {
+        "label": "app_views",
+        "importPath": "api.v1.views",
+        "description": "api.v1.views",
+        "isExtraImport": true,
+        "detail": "api.v1.views",
+        "documentation": {}
+    },
+    {
+        "label": "app_views",
+        "importPath": "api.v1.views",
+        "description": "api.v1.views",
+        "isExtraImport": true,
+        "detail": "api.v1.views",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "BasicAuth",
+        "importPath": "api.v1.auth.basic_auth",
+        "description": "api.v1.auth.basic_auth",
+        "isExtraImport": true,
+        "detail": "api.v1.auth.basic_auth",
+        "documentation": {}
+    },
+    {
+        "label": "BasicAuth",
+        "importPath": "api.v1.auth.basic_auth",
+        "description": "api.v1.auth.basic_auth",
+        "isExtraImport": true,
+        "detail": "api.v1.auth.basic_auth",
+        "documentation": {}
+    },
+    {
+        "label": "BasicAuth",
+        "importPath": "api.v1.auth.basic_auth",
+        "description": "api.v1.auth.basic_auth",
+        "isExtraImport": true,
+        "detail": "api.v1.auth.basic_auth",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "getenv",
+        "importPath": "os",
+        "description": "os",
+        "isExtraImport": true,
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "os",
+        "description": "os",
+        "isExtraImport": true,
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "CORS",
+        "importPath": "flask_cors",
+        "description": "flask_cors",
+        "isExtraImport": true,
+        "detail": "flask_cors",
+        "documentation": {}
+    },
+    {
+        "label": "cross_origin",
+        "importPath": "flask_cors",
+        "description": "flask_cors",
+        "isExtraImport": true,
+        "detail": "flask_cors",
+        "documentation": {}
+    },
+    {
+        "label": "SessionAuth",
+        "importPath": "api.v1.auth.session_auth",
+        "description": "api.v1.auth.session_auth",
+        "isExtraImport": true,
+        "detail": "api.v1.auth.session_auth",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "uuid",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "uuid",
+        "description": "uuid",
+        "detail": "uuid",
+        "documentation": {}
+    },
+    {
+        "label": "hashlib",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "hashlib",
+        "description": "hashlib",
+        "detail": "hashlib",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "models.base",
+        "description": "models.base",
+        "isExtraImport": true,
+        "detail": "models.base",
+        "documentation": {}
+    },
+    {
+        "label": "Auth",
+        "kind": 6,
+        "importPath": "api.v1.auth.auth",
+        "description": "api.v1.auth.auth",
+        "peekOfCode": "class Auth:\n    \"\"\"\n    Implementing the Auth class\n    \"\"\"\n    def require_auth(self, path: str, excluded_paths: List[str]) -> bool:\n        \"\"\"\n        Check if path requires authentication\n        Return bool value\n        \"\"\"\n        if path is None:",
+        "detail": "api.v1.auth.auth",
+        "documentation": {}
+    },
+    {
+        "label": "BasicAuth",
+        "kind": 6,
+        "importPath": "api.v1.auth.basic_auth",
+        "description": "api.v1.auth.basic_auth",
+        "peekOfCode": "class BasicAuth(Auth):\n    \"\"\"Basic auth class\"\"\"\n    def extract_base64_authorization_header(self,\n                                            authorization_header: str) -> str:\n        \"\"\"\n        returns the Base64 part of the Authorization header\n        for a Basic Authentication\n        \"\"\"\n        if type(authorization_header) is not str or\\\n                authorization_header is None:",
+        "detail": "api.v1.auth.basic_auth",
+        "documentation": {}
+    },
+    {
+        "label": "SessionAuth",
+        "kind": 6,
+        "importPath": "api.v1.auth.session_auth",
+        "description": "api.v1.auth.session_auth",
+        "peekOfCode": "class SessionAuth(Auth):\n    \"\"\"\n    session auth class\n    \"\"\"\n    pass",
+        "detail": "api.v1.auth.session_auth",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "kind": 2,
+        "importPath": "api.v1.views.index",
+        "description": "api.v1.views.index",
+        "peekOfCode": "def status() -> str:\n    \"\"\" GET /api/v1/status\n    Return:\n      - the status of the API\n    \"\"\"\n    return jsonify({\"status\": \"OK\"})\n@app_views.route('/stats/', strict_slashes=False)\ndef stats() -> str:\n    \"\"\" GET /api/v1/stats\n    Return:",
+        "detail": "api.v1.views.index",
+        "documentation": {}
+    },
+    {
+        "label": "stats",
+        "kind": 2,
+        "importPath": "api.v1.views.index",
+        "description": "api.v1.views.index",
+        "peekOfCode": "def stats() -> str:\n    \"\"\" GET /api/v1/stats\n    Return:\n      - the number of each objects\n    \"\"\"\n    from models.user import User\n    stats = {}\n    stats['users'] = User.count()\n    return jsonify(stats)\n@app_views.route('/unauthorized', strict_slashes=False)",
+        "detail": "api.v1.views.index",
+        "documentation": {}
+    },
+    {
+        "label": "unauthorized",
+        "kind": 2,
+        "importPath": "api.v1.views.index",
+        "description": "api.v1.views.index",
+        "peekOfCode": "def unauthorized():\n    \"\"\"\n    testing 401 error handler\n    \"\"\"\n    abort(401)\n@app_views.route('/forbidden', strict_slashes=False)\ndef forbidden():\n    \"\"\"\n    testing 403 error handler\n    \"\"\"",
+        "detail": "api.v1.views.index",
+        "documentation": {}
+    },
+    {
+        "label": "forbidden",
+        "kind": 2,
+        "importPath": "api.v1.views.index",
+        "description": "api.v1.views.index",
+        "peekOfCode": "def forbidden():\n    \"\"\"\n    testing 403 error handler\n    \"\"\"\n    abort(403)",
+        "detail": "api.v1.views.index",
+        "documentation": {}
+    },
+    {
+        "label": "view_all_users",
+        "kind": 2,
+        "importPath": "api.v1.views.users",
+        "description": "api.v1.views.users",
+        "peekOfCode": "def view_all_users() -> str:\n    \"\"\" GET /api/v1/users\n    Return:\n      - list of all User objects JSON represented\n    \"\"\"\n    all_users = [user.to_json() for user in User.all()]\n    return jsonify(all_users)\n@app_views.route('/users/<user_id>', methods=['GET'], strict_slashes=False)\ndef view_one_user(user_id: str = '') -> str:\n    \"\"\" GET /api/v1/users/:id",
+        "detail": "api.v1.views.users",
+        "documentation": {}
+    },
+    {
+        "label": "view_one_user",
+        "kind": 2,
+        "importPath": "api.v1.views.users",
+        "description": "api.v1.views.users",
+        "peekOfCode": "def view_one_user(user_id: str = '') -> str:\n    \"\"\" GET /api/v1/users/:id\n    Path parameter:\n      - User ID\n    Return:\n      - User object JSON represented\n      - 404 if the User ID doesn't exist\n    \"\"\"\n    if user_id == me:\n        if request.current_user is None:",
+        "detail": "api.v1.views.users",
+        "documentation": {}
+    },
+    {
+        "label": "delete_user",
+        "kind": 2,
+        "importPath": "api.v1.views.users",
+        "description": "api.v1.views.users",
+        "peekOfCode": "def delete_user(user_id: str = '') -> str:\n    \"\"\" DELETE /api/v1/users/:id\n    Path parameter:\n      - User ID\n    Return:\n      - empty JSON is the User has been correctly deleted\n      - 404 if the User ID doesn't exist\n    \"\"\"\n    if user_id is None:\n        abort(404)",
+        "detail": "api.v1.views.users",
+        "documentation": {}
+    },
+    {
+        "label": "create_user",
+        "kind": 2,
+        "importPath": "api.v1.views.users",
+        "description": "api.v1.views.users",
+        "peekOfCode": "def create_user() -> str:\n    \"\"\" POST /api/v1/users/\n    JSON body:\n      - email\n      - password\n      - last_name (optional)\n      - first_name (optional)\n    Return:\n      - User object JSON represented\n      - 400 if can't create the new User",
+        "detail": "api.v1.views.users",
+        "documentation": {}
+    },
+    {
+        "label": "update_user",
+        "kind": 2,
+        "importPath": "api.v1.views.users",
+        "description": "api.v1.views.users",
+        "peekOfCode": "def update_user(user_id: str = None) -> str:\n    \"\"\" PUT /api/v1/users/:id\n    Path parameter:\n      - User ID\n    JSON body:\n      - last_name (optional)\n      - first_name (optional)\n    Return:\n      - User object JSON represented\n      - 404 if the User ID doesn't exist",
+        "detail": "api.v1.views.users",
+        "documentation": {}
+    },
+    {
+        "label": "me",
+        "kind": 2,
+        "importPath": "api.v1.views.users",
+        "description": "api.v1.views.users",
+        "peekOfCode": "def me():\n    \"\"\"\n    retrieve the authenticated user\n    \"\"\"\n    user = request.current_user\n    return jsonify(user.to_dict())",
+        "detail": "api.v1.views.users",
+        "documentation": {}
+    },
+    {
+        "label": "not_found",
+        "kind": 2,
+        "importPath": "api.v1.app",
+        "description": "api.v1.app",
+        "peekOfCode": "def not_found(error) -> str:\n    \"\"\" Not found handler\n    \"\"\"\n    return jsonify({\"error\": \"Not found\"}), 404\n@app.errorhandler(401)\ndef unauthorized(error) -> str:\n    \"\"\"\n    unauthorized handler\n    \"\"\"\n    return jsonify({\"error\": \"Unauthorized\"}), 401",
+        "detail": "api.v1.app",
+        "documentation": {}
+    },
+    {
+        "label": "unauthorized",
+        "kind": 2,
+        "importPath": "api.v1.app",
+        "description": "api.v1.app",
+        "peekOfCode": "def unauthorized(error) -> str:\n    \"\"\"\n    unauthorized handler\n    \"\"\"\n    return jsonify({\"error\": \"Unauthorized\"}), 401\n@app.errorhandler(403)\ndef forbidden(error) -> str:\n    \"\"\"\n    forbidden handler\n    \"\"\"",
+        "detail": "api.v1.app",
+        "documentation": {}
+    },
+    {
+        "label": "forbidden",
+        "kind": 2,
+        "importPath": "api.v1.app",
+        "description": "api.v1.app",
+        "peekOfCode": "def forbidden(error) -> str:\n    \"\"\"\n    forbidden handler\n    \"\"\"\n    return jsonify({\"error\": \"Forbidden\"}), 403\n@app.before_request\ndef authenticateUser():\n    \"\"\"\n    authenticate user method\n    \"\"\"",
+        "detail": "api.v1.app",
+        "documentation": {}
+    },
+    {
+        "label": "authenticateUser",
+        "kind": 2,
+        "importPath": "api.v1.app",
+        "description": "api.v1.app",
+        "peekOfCode": "def authenticateUser():\n    \"\"\"\n    authenticate user method\n    \"\"\"\n    path_list = [\n        '/api/v1/status/',\n        '/api/v1/unauthorized/',\n        '/api/v1/forbidden/'\n        ]\n    request.current_user = auth.current_user(request)",
+        "detail": "api.v1.app",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "api.v1.app",
+        "description": "api.v1.app",
+        "peekOfCode": "app = Flask(__name__)\napp.register_blueprint(app_views)\nCORS(app, resources={r\"/api/v1/*\": {\"origins\": \"*\"}})\nauth = None\nauth_type = getenv('AUTH_TYPE', 'auth')\nif auth_type == 'auth':\n    auth = Auth()\nif auth_type == 'basic_auth':\n    auth = BasicAuth()\nif auth_type == 'session_auth':",
+        "detail": "api.v1.app",
+        "documentation": {}
+    },
+    {
+        "label": "auth",
+        "kind": 5,
+        "importPath": "api.v1.app",
+        "description": "api.v1.app",
+        "peekOfCode": "auth = None\nauth_type = getenv('AUTH_TYPE', 'auth')\nif auth_type == 'auth':\n    auth = Auth()\nif auth_type == 'basic_auth':\n    auth = BasicAuth()\nif auth_type == 'session_auth':\n    auth = SessionAuth()\n@app.errorhandler(404)\ndef not_found(error) -> str:",
+        "detail": "api.v1.app",
+        "documentation": {}
+    },
+    {
+        "label": "auth_type",
+        "kind": 5,
+        "importPath": "api.v1.app",
+        "description": "api.v1.app",
+        "peekOfCode": "auth_type = getenv('AUTH_TYPE', 'auth')\nif auth_type == 'auth':\n    auth = Auth()\nif auth_type == 'basic_auth':\n    auth = BasicAuth()\nif auth_type == 'session_auth':\n    auth = SessionAuth()\n@app.errorhandler(404)\ndef not_found(error) -> str:\n    \"\"\" Not found handler",
+        "detail": "api.v1.app",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "kind": 6,
+        "importPath": "models.base",
+        "description": "models.base",
+        "peekOfCode": "class Base():\n    \"\"\" Base class\n    \"\"\"\n    def __init__(self, *args: list, **kwargs: dict):\n        \"\"\" Initialize a Base instance\n        \"\"\"\n        s_class = str(self.__class__.__name__)\n        if DATA.get(s_class) is None:\n            DATA[s_class] = {}\n        self.id = kwargs.get('id', str(uuid.uuid4()))",
+        "detail": "models.base",
+        "documentation": {}
+    },
+    {
+        "label": "TIMESTAMP_FORMAT",
+        "kind": 5,
+        "importPath": "models.base",
+        "description": "models.base",
+        "peekOfCode": "TIMESTAMP_FORMAT = \"%Y-%m-%dT%H:%M:%S\"\nDATA = {}\nclass Base():\n    \"\"\" Base class\n    \"\"\"\n    def __init__(self, *args: list, **kwargs: dict):\n        \"\"\" Initialize a Base instance\n        \"\"\"\n        s_class = str(self.__class__.__name__)\n        if DATA.get(s_class) is None:",
+        "detail": "models.base",
+        "documentation": {}
+    },
+    {
+        "label": "DATA",
+        "kind": 5,
+        "importPath": "models.base",
+        "description": "models.base",
+        "peekOfCode": "DATA = {}\nclass Base():\n    \"\"\" Base class\n    \"\"\"\n    def __init__(self, *args: list, **kwargs: dict):\n        \"\"\" Initialize a Base instance\n        \"\"\"\n        s_class = str(self.__class__.__name__)\n        if DATA.get(s_class) is None:\n            DATA[s_class] = {}",
+        "detail": "models.base",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "kind": 6,
+        "importPath": "models.user",
+        "description": "models.user",
+        "peekOfCode": "class User(Base):\n    \"\"\" User class\n    \"\"\"\n    def __init__(self, *args: list, **kwargs: dict):\n        \"\"\" Initialize a User instance\n        \"\"\"\n        super().__init__(*args, **kwargs)\n        self.email = kwargs.get('email')\n        self._password = kwargs.get('_password')\n        self.first_name = kwargs.get('first_name')",
+        "detail": "models.user",
+        "documentation": {}
+    },
+    {
+        "label": "user_email",
+        "kind": 5,
+        "importPath": "main_0",
+        "description": "main_0",
+        "peekOfCode": "user_email = \"bob@hbtn.io\"\nuser_clear_pwd = \"H0lbertonSchool98!\"\nuser = User()\nuser.email = user_email\nuser.password = user_clear_pwd\nprint(\"New user: {}\".format(user.id))\nuser.save()\nbasic_clear = \"{}:{}\".format(user_email, user_clear_pwd)\nprint(\"Basic Base64: {}\".format(base64.b64encode(basic_clear.encode('utf-8')).decode(\"utf-8\")))",
+        "detail": "main_0",
+        "documentation": {}
+    },
+    {
+        "label": "user_clear_pwd",
+        "kind": 5,
+        "importPath": "main_0",
+        "description": "main_0",
+        "peekOfCode": "user_clear_pwd = \"H0lbertonSchool98!\"\nuser = User()\nuser.email = user_email\nuser.password = user_clear_pwd\nprint(\"New user: {}\".format(user.id))\nuser.save()\nbasic_clear = \"{}:{}\".format(user_email, user_clear_pwd)\nprint(\"Basic Base64: {}\".format(base64.b64encode(basic_clear.encode('utf-8')).decode(\"utf-8\")))",
+        "detail": "main_0",
+        "documentation": {}
+    },
+    {
+        "label": "user",
+        "kind": 5,
+        "importPath": "main_0",
+        "description": "main_0",
+        "peekOfCode": "user = User()\nuser.email = user_email\nuser.password = user_clear_pwd\nprint(\"New user: {}\".format(user.id))\nuser.save()\nbasic_clear = \"{}:{}\".format(user_email, user_clear_pwd)\nprint(\"Basic Base64: {}\".format(base64.b64encode(basic_clear.encode('utf-8')).decode(\"utf-8\")))",
+        "detail": "main_0",
+        "documentation": {}
+    },
+    {
+        "label": "user.email",
+        "kind": 5,
+        "importPath": "main_0",
+        "description": "main_0",
+        "peekOfCode": "user.email = user_email\nuser.password = user_clear_pwd\nprint(\"New user: {}\".format(user.id))\nuser.save()\nbasic_clear = \"{}:{}\".format(user_email, user_clear_pwd)\nprint(\"Basic Base64: {}\".format(base64.b64encode(basic_clear.encode('utf-8')).decode(\"utf-8\")))",
+        "detail": "main_0",
+        "documentation": {}
+    },
+    {
+        "label": "user.password",
+        "kind": 5,
+        "importPath": "main_0",
+        "description": "main_0",
+        "peekOfCode": "user.password = user_clear_pwd\nprint(\"New user: {}\".format(user.id))\nuser.save()\nbasic_clear = \"{}:{}\".format(user_email, user_clear_pwd)\nprint(\"Basic Base64: {}\".format(base64.b64encode(basic_clear.encode('utf-8')).decode(\"utf-8\")))",
+        "detail": "main_0",
+        "documentation": {}
+    },
+    {
+        "label": "basic_clear",
+        "kind": 5,
+        "importPath": "main_0",
+        "description": "main_0",
+        "peekOfCode": "basic_clear = \"{}:{}\".format(user_email, user_clear_pwd)\nprint(\"Basic Base64: {}\".format(base64.b64encode(basic_clear.encode('utf-8')).decode(\"utf-8\")))",
+        "detail": "main_0",
+        "documentation": {}
+    }
+]
