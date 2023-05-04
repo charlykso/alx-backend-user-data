@@ -548,7 +548,7 @@
         "kind": 2,
         "importPath": "api.v1.app",
         "description": "api.v1.app",
-        "peekOfCode": "def authenticateUser():\n    \"\"\"\n    authenticate user method\n    \"\"\"\n    path_list = [\n        '/api/v1/status/',\n        '/api/v1/unauthorized/',\n        '/api/v1/forbidden/'\n        ]\n    request.current_user = auth.current_user(request)",
+        "peekOfCode": "def authenticateUser():\n    \"\"\"\n    authenticate user method\n    \"\"\"\n    path_list = [\n        '/api/v1/status/',\n        '/api/v1/unauthorized/',\n        '/api/v1/forbidden/',\n        '/api/v1/auth_session/login/'\n        ]",
         "detail": "api.v1.app",
         "documentation": {}
     },
