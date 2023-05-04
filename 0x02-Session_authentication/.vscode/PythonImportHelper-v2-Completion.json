@@ -98,6 +98,22 @@
         "documentation": {}
     },
     {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
         "label": "typing",
         "kind": 6,
         "isExtraImport": true,
@@ -171,6 +187,31 @@
         "documentation": {}
     },
     {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "getenv",
+        "importPath": "os",
+        "description": "os",
+        "isExtraImport": true,
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "os",
+        "description": "os",
+        "isExtraImport": true,
+        "detail": "os",
+        "documentation": {}
+    },
+    {
         "label": "base64",
         "kind": 6,
         "isExtraImport": true,
@@ -210,6 +251,14 @@
         "description": "models.user",
         "isExtraImport": true,
         "detail": "models.user",
+        "documentation": {}
+    },
+    {
+        "label": "Auth",
+        "importPath": "api.v1.auth.auth",
+        "description": "api.v1.auth.auth",
+        "isExtraImport": true,
+        "detail": "api.v1.auth.auth",
         "documentation": {}
     },
     {
@@ -292,31 +341,6 @@
         "description": "api.v1.auth.basic_auth",
         "isExtraImport": true,
         "detail": "api.v1.auth.basic_auth",
-        "documentation": {}
-    },
-    {
-        "label": "os",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "os",
-        "description": "os",
-        "detail": "os",
-        "documentation": {}
-    },
-    {
-        "label": "getenv",
-        "importPath": "os",
-        "description": "os",
-        "isExtraImport": true,
-        "detail": "os",
-        "documentation": {}
-    },
-    {
-        "label": "path",
-        "importPath": "os",
-        "description": "os",
-        "isExtraImport": true,
-        "detail": "os",
         "documentation": {}
     },
     {
@@ -904,6 +928,33 @@
         "description": "main_2",
         "peekOfCode": "tmp_user_id = sa.user_id_for_session_id(session_1)\nprint(\"{} => {}\".format(session_1, tmp_user_id))",
         "detail": "main_2",
+        "documentation": {}
+    },
+    {
+        "label": "root_path",
+        "kind": 2,
+        "importPath": "main_3",
+        "description": "main_3",
+        "peekOfCode": "def root_path():\n    \"\"\" Root path\n    \"\"\"\n    return \"Cookie value: {}\\n\".format(auth.session_cookie(request))\nif __name__ == \"__main__\":\n    app.run(host=\"0.0.0.0\", port=\"5000\")",
+        "detail": "main_3",
+        "documentation": {}
+    },
+    {
+        "label": "auth",
+        "kind": 5,
+        "importPath": "main_3",
+        "description": "main_3",
+        "peekOfCode": "auth = Auth()\napp = Flask(__name__)\n@app.route('/', methods=['GET'], strict_slashes=False)\ndef root_path():\n    \"\"\" Root path\n    \"\"\"\n    return \"Cookie value: {}\\n\".format(auth.session_cookie(request))\nif __name__ == \"__main__\":\n    app.run(host=\"0.0.0.0\", port=\"5000\")",
+        "detail": "main_3",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "main_3",
+        "description": "main_3",
+        "peekOfCode": "app = Flask(__name__)\n@app.route('/', methods=['GET'], strict_slashes=False)\ndef root_path():\n    \"\"\" Root path\n    \"\"\"\n    return \"Cookie value: {}\\n\".format(auth.session_cookie(request))\nif __name__ == \"__main__\":\n    app.run(host=\"0.0.0.0\", port=\"5000\")",
+        "detail": "main_3",
         "documentation": {}
     }
 ]
