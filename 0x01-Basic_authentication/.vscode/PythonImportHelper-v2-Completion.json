@@ -121,6 +121,14 @@
         "documentation": {}
     },
     {
+        "label": "TypeVar",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "List",
         "importPath": "typing",
         "description": "typing",
@@ -171,6 +179,30 @@
         "documentation": {}
     },
     {
+        "label": "User",
+        "importPath": "models.user",
+        "description": "models.user",
+        "isExtraImport": true,
+        "detail": "models.user",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "models.user",
+        "description": "models.user",
+        "isExtraImport": true,
+        "detail": "models.user",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "models.user",
+        "description": "models.user",
+        "isExtraImport": true,
+        "detail": "models.user",
+        "documentation": {}
+    },
+    {
         "label": "app_views",
         "importPath": "api.v1.views",
         "description": "api.v1.views",
@@ -201,14 +233,6 @@
         "importPath": "json",
         "description": "json",
         "detail": "json",
-        "documentation": {}
-    },
-    {
-        "label": "User",
-        "importPath": "models.user",
-        "description": "models.user",
-        "isExtraImport": true,
-        "detail": "models.user",
         "documentation": {}
     },
     {
@@ -308,6 +332,14 @@
         "description": "models.base",
         "isExtraImport": true,
         "detail": "models.base",
+        "documentation": {}
+    },
+    {
+        "label": "BasicAuth",
+        "importPath": "api.v1.auth.basic_auth",
+        "description": "api.v1.auth.basic_auth",
+        "isExtraImport": true,
+        "detail": "api.v1.auth.basic_auth",
         "documentation": {}
     },
     {
@@ -575,6 +607,123 @@
         "description": "main_4",
         "peekOfCode": "a = BasicAuth()\nprint(a.extract_user_credentials(None))\nprint(a.extract_user_credentials(89))\nprint(a.extract_user_credentials(\"Holberton School\"))\nprint(a.extract_user_credentials(\"Holberton:School\"))\nprint(a.extract_user_credentials(\"bob@gmail.com:toto1234\"))",
         "detail": "main_4",
+        "documentation": {}
+    },
+    {
+        "label": "user_email",
+        "kind": 5,
+        "importPath": "main_5",
+        "description": "main_5",
+        "peekOfCode": "user_email = str(uuid.uuid4())\nuser_clear_pwd = str(uuid.uuid4())\nuser = User()\nuser.email = user_email\nuser.first_name = \"Bob\"\nuser.last_name = \"Dylan\"\nuser.password = user_clear_pwd\nprint(\"New user: {}\".format(user.display_name()))\nuser.save()\n\"\"\" Retreive this user via the class BasicAuth \"\"\"",
+        "detail": "main_5",
+        "documentation": {}
+    },
+    {
+        "label": "user_clear_pwd",
+        "kind": 5,
+        "importPath": "main_5",
+        "description": "main_5",
+        "peekOfCode": "user_clear_pwd = str(uuid.uuid4())\nuser = User()\nuser.email = user_email\nuser.first_name = \"Bob\"\nuser.last_name = \"Dylan\"\nuser.password = user_clear_pwd\nprint(\"New user: {}\".format(user.display_name()))\nuser.save()\n\"\"\" Retreive this user via the class BasicAuth \"\"\"\na = BasicAuth()",
+        "detail": "main_5",
+        "documentation": {}
+    },
+    {
+        "label": "user",
+        "kind": 5,
+        "importPath": "main_5",
+        "description": "main_5",
+        "peekOfCode": "user = User()\nuser.email = user_email\nuser.first_name = \"Bob\"\nuser.last_name = \"Dylan\"\nuser.password = user_clear_pwd\nprint(\"New user: {}\".format(user.display_name()))\nuser.save()\n\"\"\" Retreive this user via the class BasicAuth \"\"\"\na = BasicAuth()\nu = a.user_object_from_credentials(None, None)",
+        "detail": "main_5",
+        "documentation": {}
+    },
+    {
+        "label": "user.email",
+        "kind": 5,
+        "importPath": "main_5",
+        "description": "main_5",
+        "peekOfCode": "user.email = user_email\nuser.first_name = \"Bob\"\nuser.last_name = \"Dylan\"\nuser.password = user_clear_pwd\nprint(\"New user: {}\".format(user.display_name()))\nuser.save()\n\"\"\" Retreive this user via the class BasicAuth \"\"\"\na = BasicAuth()\nu = a.user_object_from_credentials(None, None)\nprint(u.display_name() if u is not None else \"None\")",
+        "detail": "main_5",
+        "documentation": {}
+    },
+    {
+        "label": "user.first_name",
+        "kind": 5,
+        "importPath": "main_5",
+        "description": "main_5",
+        "peekOfCode": "user.first_name = \"Bob\"\nuser.last_name = \"Dylan\"\nuser.password = user_clear_pwd\nprint(\"New user: {}\".format(user.display_name()))\nuser.save()\n\"\"\" Retreive this user via the class BasicAuth \"\"\"\na = BasicAuth()\nu = a.user_object_from_credentials(None, None)\nprint(u.display_name() if u is not None else \"None\")\nu = a.user_object_from_credentials(89, 98)",
+        "detail": "main_5",
+        "documentation": {}
+    },
+    {
+        "label": "user.last_name",
+        "kind": 5,
+        "importPath": "main_5",
+        "description": "main_5",
+        "peekOfCode": "user.last_name = \"Dylan\"\nuser.password = user_clear_pwd\nprint(\"New user: {}\".format(user.display_name()))\nuser.save()\n\"\"\" Retreive this user via the class BasicAuth \"\"\"\na = BasicAuth()\nu = a.user_object_from_credentials(None, None)\nprint(u.display_name() if u is not None else \"None\")\nu = a.user_object_from_credentials(89, 98)\nprint(u.display_name() if u is not None else \"None\")",
+        "detail": "main_5",
+        "documentation": {}
+    },
+    {
+        "label": "user.password",
+        "kind": 5,
+        "importPath": "main_5",
+        "description": "main_5",
+        "peekOfCode": "user.password = user_clear_pwd\nprint(\"New user: {}\".format(user.display_name()))\nuser.save()\n\"\"\" Retreive this user via the class BasicAuth \"\"\"\na = BasicAuth()\nu = a.user_object_from_credentials(None, None)\nprint(u.display_name() if u is not None else \"None\")\nu = a.user_object_from_credentials(89, 98)\nprint(u.display_name() if u is not None else \"None\")\nu = a.user_object_from_credentials(\"email@notfound.com\", \"pwd\")",
+        "detail": "main_5",
+        "documentation": {}
+    },
+    {
+        "label": "a",
+        "kind": 5,
+        "importPath": "main_5",
+        "description": "main_5",
+        "peekOfCode": "a = BasicAuth()\nu = a.user_object_from_credentials(None, None)\nprint(u.display_name() if u is not None else \"None\")\nu = a.user_object_from_credentials(89, 98)\nprint(u.display_name() if u is not None else \"None\")\nu = a.user_object_from_credentials(\"email@notfound.com\", \"pwd\")\nprint(u.display_name() if u is not None else \"None\")\nu = a.user_object_from_credentials(user_email, \"pwd\")\nprint(u.display_name() if u is not None else \"None\")\nu = a.user_object_from_credentials(user_email, user_clear_pwd)",
+        "detail": "main_5",
+        "documentation": {}
+    },
+    {
+        "label": "u",
+        "kind": 5,
+        "importPath": "main_5",
+        "description": "main_5",
+        "peekOfCode": "u = a.user_object_from_credentials(None, None)\nprint(u.display_name() if u is not None else \"None\")\nu = a.user_object_from_credentials(89, 98)\nprint(u.display_name() if u is not None else \"None\")\nu = a.user_object_from_credentials(\"email@notfound.com\", \"pwd\")\nprint(u.display_name() if u is not None else \"None\")\nu = a.user_object_from_credentials(user_email, \"pwd\")\nprint(u.display_name() if u is not None else \"None\")\nu = a.user_object_from_credentials(user_email, user_clear_pwd)\nprint(u.display_name() if u is not None else \"None\")",
+        "detail": "main_5",
+        "documentation": {}
+    },
+    {
+        "label": "u",
+        "kind": 5,
+        "importPath": "main_5",
+        "description": "main_5",
+        "peekOfCode": "u = a.user_object_from_credentials(89, 98)\nprint(u.display_name() if u is not None else \"None\")\nu = a.user_object_from_credentials(\"email@notfound.com\", \"pwd\")\nprint(u.display_name() if u is not None else \"None\")\nu = a.user_object_from_credentials(user_email, \"pwd\")\nprint(u.display_name() if u is not None else \"None\")\nu = a.user_object_from_credentials(user_email, user_clear_pwd)\nprint(u.display_name() if u is not None else \"None\")",
+        "detail": "main_5",
+        "documentation": {}
+    },
+    {
+        "label": "u",
+        "kind": 5,
+        "importPath": "main_5",
+        "description": "main_5",
+        "peekOfCode": "u = a.user_object_from_credentials(\"email@notfound.com\", \"pwd\")\nprint(u.display_name() if u is not None else \"None\")\nu = a.user_object_from_credentials(user_email, \"pwd\")\nprint(u.display_name() if u is not None else \"None\")\nu = a.user_object_from_credentials(user_email, user_clear_pwd)\nprint(u.display_name() if u is not None else \"None\")",
+        "detail": "main_5",
+        "documentation": {}
+    },
+    {
+        "label": "u",
+        "kind": 5,
+        "importPath": "main_5",
+        "description": "main_5",
+        "peekOfCode": "u = a.user_object_from_credentials(user_email, \"pwd\")\nprint(u.display_name() if u is not None else \"None\")\nu = a.user_object_from_credentials(user_email, user_clear_pwd)\nprint(u.display_name() if u is not None else \"None\")",
+        "detail": "main_5",
+        "documentation": {}
+    },
+    {
+        "label": "u",
+        "kind": 5,
+        "importPath": "main_5",
+        "description": "main_5",
+        "peekOfCode": "u = a.user_object_from_credentials(user_email, user_clear_pwd)\nprint(u.display_name() if u is not None else \"None\")",
+        "detail": "main_5",
         "documentation": {}
     }
 ]
