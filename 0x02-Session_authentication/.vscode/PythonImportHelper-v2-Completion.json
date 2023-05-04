@@ -352,6 +352,14 @@
         "documentation": {}
     },
     {
+        "label": "SessionAuth",
+        "importPath": "api.v1.auth.session_auth",
+        "description": "api.v1.auth.session_auth",
+        "isExtraImport": true,
+        "detail": "api.v1.auth.session_auth",
+        "documentation": {}
+    },
+    {
         "label": "datetime",
         "importPath": "datetime",
         "description": "datetime",
@@ -734,6 +742,168 @@
         "description": "main_1",
         "peekOfCode": "session = sa.create_session(user_id)\nprint(\"{} => {}: {}\".format(user_id, session, sa.user_id_by_session_id))",
         "detail": "main_1",
+        "documentation": {}
+    },
+    {
+        "label": "sa",
+        "kind": 5,
+        "importPath": "main_2",
+        "description": "main_2",
+        "peekOfCode": "sa = SessionAuth()\nuser_id_1 = \"abcde\"\nsession_1 = sa.create_session(user_id_1)\nprint(\"{} => {}: {}\".format(user_id_1, session_1, sa.user_id_by_session_id))\nuser_id_2 = \"fghij\"\nsession_2 = sa.create_session(user_id_2)\nprint(\"{} => {}: {}\".format(user_id_2, session_2, sa.user_id_by_session_id))\nprint(\"---\")\ntmp_session_id = None\ntmp_user_id = sa.user_id_for_session_id(tmp_session_id)",
+        "detail": "main_2",
+        "documentation": {}
+    },
+    {
+        "label": "user_id_1",
+        "kind": 5,
+        "importPath": "main_2",
+        "description": "main_2",
+        "peekOfCode": "user_id_1 = \"abcde\"\nsession_1 = sa.create_session(user_id_1)\nprint(\"{} => {}: {}\".format(user_id_1, session_1, sa.user_id_by_session_id))\nuser_id_2 = \"fghij\"\nsession_2 = sa.create_session(user_id_2)\nprint(\"{} => {}: {}\".format(user_id_2, session_2, sa.user_id_by_session_id))\nprint(\"---\")\ntmp_session_id = None\ntmp_user_id = sa.user_id_for_session_id(tmp_session_id)\nprint(\"{} => {}\".format(tmp_session_id, tmp_user_id))",
+        "detail": "main_2",
+        "documentation": {}
+    },
+    {
+        "label": "session_1",
+        "kind": 5,
+        "importPath": "main_2",
+        "description": "main_2",
+        "peekOfCode": "session_1 = sa.create_session(user_id_1)\nprint(\"{} => {}: {}\".format(user_id_1, session_1, sa.user_id_by_session_id))\nuser_id_2 = \"fghij\"\nsession_2 = sa.create_session(user_id_2)\nprint(\"{} => {}: {}\".format(user_id_2, session_2, sa.user_id_by_session_id))\nprint(\"---\")\ntmp_session_id = None\ntmp_user_id = sa.user_id_for_session_id(tmp_session_id)\nprint(\"{} => {}\".format(tmp_session_id, tmp_user_id))\ntmp_session_id = 89",
+        "detail": "main_2",
+        "documentation": {}
+    },
+    {
+        "label": "user_id_2",
+        "kind": 5,
+        "importPath": "main_2",
+        "description": "main_2",
+        "peekOfCode": "user_id_2 = \"fghij\"\nsession_2 = sa.create_session(user_id_2)\nprint(\"{} => {}: {}\".format(user_id_2, session_2, sa.user_id_by_session_id))\nprint(\"---\")\ntmp_session_id = None\ntmp_user_id = sa.user_id_for_session_id(tmp_session_id)\nprint(\"{} => {}\".format(tmp_session_id, tmp_user_id))\ntmp_session_id = 89\ntmp_user_id = sa.user_id_for_session_id(tmp_session_id)\nprint(\"{} => {}\".format(tmp_session_id, tmp_user_id))",
+        "detail": "main_2",
+        "documentation": {}
+    },
+    {
+        "label": "session_2",
+        "kind": 5,
+        "importPath": "main_2",
+        "description": "main_2",
+        "peekOfCode": "session_2 = sa.create_session(user_id_2)\nprint(\"{} => {}: {}\".format(user_id_2, session_2, sa.user_id_by_session_id))\nprint(\"---\")\ntmp_session_id = None\ntmp_user_id = sa.user_id_for_session_id(tmp_session_id)\nprint(\"{} => {}\".format(tmp_session_id, tmp_user_id))\ntmp_session_id = 89\ntmp_user_id = sa.user_id_for_session_id(tmp_session_id)\nprint(\"{} => {}\".format(tmp_session_id, tmp_user_id))\ntmp_session_id = \"doesntexist\"",
+        "detail": "main_2",
+        "documentation": {}
+    },
+    {
+        "label": "tmp_session_id",
+        "kind": 5,
+        "importPath": "main_2",
+        "description": "main_2",
+        "peekOfCode": "tmp_session_id = None\ntmp_user_id = sa.user_id_for_session_id(tmp_session_id)\nprint(\"{} => {}\".format(tmp_session_id, tmp_user_id))\ntmp_session_id = 89\ntmp_user_id = sa.user_id_for_session_id(tmp_session_id)\nprint(\"{} => {}\".format(tmp_session_id, tmp_user_id))\ntmp_session_id = \"doesntexist\"\ntmp_user_id = sa.user_id_for_session_id(tmp_session_id)\nprint(\"{} => {}\".format(tmp_session_id, tmp_user_id))\nprint(\"---\")",
+        "detail": "main_2",
+        "documentation": {}
+    },
+    {
+        "label": "tmp_user_id",
+        "kind": 5,
+        "importPath": "main_2",
+        "description": "main_2",
+        "peekOfCode": "tmp_user_id = sa.user_id_for_session_id(tmp_session_id)\nprint(\"{} => {}\".format(tmp_session_id, tmp_user_id))\ntmp_session_id = 89\ntmp_user_id = sa.user_id_for_session_id(tmp_session_id)\nprint(\"{} => {}\".format(tmp_session_id, tmp_user_id))\ntmp_session_id = \"doesntexist\"\ntmp_user_id = sa.user_id_for_session_id(tmp_session_id)\nprint(\"{} => {}\".format(tmp_session_id, tmp_user_id))\nprint(\"---\")\ntmp_session_id = session_1",
+        "detail": "main_2",
+        "documentation": {}
+    },
+    {
+        "label": "tmp_session_id",
+        "kind": 5,
+        "importPath": "main_2",
+        "description": "main_2",
+        "peekOfCode": "tmp_session_id = 89\ntmp_user_id = sa.user_id_for_session_id(tmp_session_id)\nprint(\"{} => {}\".format(tmp_session_id, tmp_user_id))\ntmp_session_id = \"doesntexist\"\ntmp_user_id = sa.user_id_for_session_id(tmp_session_id)\nprint(\"{} => {}\".format(tmp_session_id, tmp_user_id))\nprint(\"---\")\ntmp_session_id = session_1\ntmp_user_id = sa.user_id_for_session_id(tmp_session_id)\nprint(\"{} => {}\".format(tmp_session_id, tmp_user_id))",
+        "detail": "main_2",
+        "documentation": {}
+    },
+    {
+        "label": "tmp_user_id",
+        "kind": 5,
+        "importPath": "main_2",
+        "description": "main_2",
+        "peekOfCode": "tmp_user_id = sa.user_id_for_session_id(tmp_session_id)\nprint(\"{} => {}\".format(tmp_session_id, tmp_user_id))\ntmp_session_id = \"doesntexist\"\ntmp_user_id = sa.user_id_for_session_id(tmp_session_id)\nprint(\"{} => {}\".format(tmp_session_id, tmp_user_id))\nprint(\"---\")\ntmp_session_id = session_1\ntmp_user_id = sa.user_id_for_session_id(tmp_session_id)\nprint(\"{} => {}\".format(tmp_session_id, tmp_user_id))\ntmp_session_id = session_2",
+        "detail": "main_2",
+        "documentation": {}
+    },
+    {
+        "label": "tmp_session_id",
+        "kind": 5,
+        "importPath": "main_2",
+        "description": "main_2",
+        "peekOfCode": "tmp_session_id = \"doesntexist\"\ntmp_user_id = sa.user_id_for_session_id(tmp_session_id)\nprint(\"{} => {}\".format(tmp_session_id, tmp_user_id))\nprint(\"---\")\ntmp_session_id = session_1\ntmp_user_id = sa.user_id_for_session_id(tmp_session_id)\nprint(\"{} => {}\".format(tmp_session_id, tmp_user_id))\ntmp_session_id = session_2\ntmp_user_id = sa.user_id_for_session_id(tmp_session_id)\nprint(\"{} => {}\".format(tmp_session_id, tmp_user_id))",
+        "detail": "main_2",
+        "documentation": {}
+    },
+    {
+        "label": "tmp_user_id",
+        "kind": 5,
+        "importPath": "main_2",
+        "description": "main_2",
+        "peekOfCode": "tmp_user_id = sa.user_id_for_session_id(tmp_session_id)\nprint(\"{} => {}\".format(tmp_session_id, tmp_user_id))\nprint(\"---\")\ntmp_session_id = session_1\ntmp_user_id = sa.user_id_for_session_id(tmp_session_id)\nprint(\"{} => {}\".format(tmp_session_id, tmp_user_id))\ntmp_session_id = session_2\ntmp_user_id = sa.user_id_for_session_id(tmp_session_id)\nprint(\"{} => {}\".format(tmp_session_id, tmp_user_id))\nprint(\"---\")",
+        "detail": "main_2",
+        "documentation": {}
+    },
+    {
+        "label": "tmp_session_id",
+        "kind": 5,
+        "importPath": "main_2",
+        "description": "main_2",
+        "peekOfCode": "tmp_session_id = session_1\ntmp_user_id = sa.user_id_for_session_id(tmp_session_id)\nprint(\"{} => {}\".format(tmp_session_id, tmp_user_id))\ntmp_session_id = session_2\ntmp_user_id = sa.user_id_for_session_id(tmp_session_id)\nprint(\"{} => {}\".format(tmp_session_id, tmp_user_id))\nprint(\"---\")\nsession_1_bis = sa.create_session(user_id_1)\nprint(\"{} => {}: {}\".format(user_id_1, session_1_bis, sa.user_id_by_session_id))\ntmp_user_id = sa.user_id_for_session_id(session_1_bis)",
+        "detail": "main_2",
+        "documentation": {}
+    },
+    {
+        "label": "tmp_user_id",
+        "kind": 5,
+        "importPath": "main_2",
+        "description": "main_2",
+        "peekOfCode": "tmp_user_id = sa.user_id_for_session_id(tmp_session_id)\nprint(\"{} => {}\".format(tmp_session_id, tmp_user_id))\ntmp_session_id = session_2\ntmp_user_id = sa.user_id_for_session_id(tmp_session_id)\nprint(\"{} => {}\".format(tmp_session_id, tmp_user_id))\nprint(\"---\")\nsession_1_bis = sa.create_session(user_id_1)\nprint(\"{} => {}: {}\".format(user_id_1, session_1_bis, sa.user_id_by_session_id))\ntmp_user_id = sa.user_id_for_session_id(session_1_bis)\nprint(\"{} => {}\".format(session_1_bis, tmp_user_id))",
+        "detail": "main_2",
+        "documentation": {}
+    },
+    {
+        "label": "tmp_session_id",
+        "kind": 5,
+        "importPath": "main_2",
+        "description": "main_2",
+        "peekOfCode": "tmp_session_id = session_2\ntmp_user_id = sa.user_id_for_session_id(tmp_session_id)\nprint(\"{} => {}\".format(tmp_session_id, tmp_user_id))\nprint(\"---\")\nsession_1_bis = sa.create_session(user_id_1)\nprint(\"{} => {}: {}\".format(user_id_1, session_1_bis, sa.user_id_by_session_id))\ntmp_user_id = sa.user_id_for_session_id(session_1_bis)\nprint(\"{} => {}\".format(session_1_bis, tmp_user_id))\ntmp_user_id = sa.user_id_for_session_id(session_1)\nprint(\"{} => {}\".format(session_1, tmp_user_id))",
+        "detail": "main_2",
+        "documentation": {}
+    },
+    {
+        "label": "tmp_user_id",
+        "kind": 5,
+        "importPath": "main_2",
+        "description": "main_2",
+        "peekOfCode": "tmp_user_id = sa.user_id_for_session_id(tmp_session_id)\nprint(\"{} => {}\".format(tmp_session_id, tmp_user_id))\nprint(\"---\")\nsession_1_bis = sa.create_session(user_id_1)\nprint(\"{} => {}: {}\".format(user_id_1, session_1_bis, sa.user_id_by_session_id))\ntmp_user_id = sa.user_id_for_session_id(session_1_bis)\nprint(\"{} => {}\".format(session_1_bis, tmp_user_id))\ntmp_user_id = sa.user_id_for_session_id(session_1)\nprint(\"{} => {}\".format(session_1, tmp_user_id))",
+        "detail": "main_2",
+        "documentation": {}
+    },
+    {
+        "label": "session_1_bis",
+        "kind": 5,
+        "importPath": "main_2",
+        "description": "main_2",
+        "peekOfCode": "session_1_bis = sa.create_session(user_id_1)\nprint(\"{} => {}: {}\".format(user_id_1, session_1_bis, sa.user_id_by_session_id))\ntmp_user_id = sa.user_id_for_session_id(session_1_bis)\nprint(\"{} => {}\".format(session_1_bis, tmp_user_id))\ntmp_user_id = sa.user_id_for_session_id(session_1)\nprint(\"{} => {}\".format(session_1, tmp_user_id))",
+        "detail": "main_2",
+        "documentation": {}
+    },
+    {
+        "label": "tmp_user_id",
+        "kind": 5,
+        "importPath": "main_2",
+        "description": "main_2",
+        "peekOfCode": "tmp_user_id = sa.user_id_for_session_id(session_1_bis)\nprint(\"{} => {}\".format(session_1_bis, tmp_user_id))\ntmp_user_id = sa.user_id_for_session_id(session_1)\nprint(\"{} => {}\".format(session_1, tmp_user_id))",
+        "detail": "main_2",
+        "documentation": {}
+    },
+    {
+        "label": "tmp_user_id",
+        "kind": 5,
+        "importPath": "main_2",
+        "description": "main_2",
+        "peekOfCode": "tmp_user_id = sa.user_id_for_session_id(session_1)\nprint(\"{} => {}\".format(session_1, tmp_user_id))",
+        "detail": "main_2",
         "documentation": {}
     }
 ]
