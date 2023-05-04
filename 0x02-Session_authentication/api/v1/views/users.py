@@ -5,7 +5,7 @@ from api.v1.views import app_views
 from flask import abort, jsonify, request
 import json
 from models.user import User
-from typing import List
+import typing
 from api.v1.auth.basic_auth import BasicAuth
 
 
@@ -28,7 +28,7 @@ def view_one_user(user_id: str = '') -> str:
       - User object JSON represented
       - 404 if the User ID doesn't exist
     """
-    if user_id == me:
+    if user_id == 'me':
         if request.current_user is None:
             abort(404)
         else:
@@ -127,12 +127,3 @@ def update_user(user_id: str = None) -> str:
         user.last_name = rj.get('last_name')
     user.save()
     return jsonify(user.to_json()), 200
-
-
-@app_views.route('/users/me', methods=['GET'], strict_slashes=False)
-def me():
-    """
-    retrieve the authenticated user
-    """
-    user = request.current_user
-    return jsonify(user.to_dict())

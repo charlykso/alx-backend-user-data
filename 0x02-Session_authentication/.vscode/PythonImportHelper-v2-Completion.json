@@ -98,6 +98,15 @@
         "documentation": {}
     },
     {
+        "label": "typing",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "typing",
+        "description": "typing",
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "List",
         "importPath": "typing",
         "description": "typing",
@@ -131,14 +140,6 @@
     },
     {
         "label": "TypeVar",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "List",
         "importPath": "typing",
         "description": "typing",
         "isExtraImport": true,
@@ -225,6 +226,15 @@
         "description": "api.v1.auth.auth",
         "isExtraImport": true,
         "detail": "api.v1.auth.auth",
+        "documentation": {}
+    },
+    {
+        "label": "uuid",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "uuid",
+        "description": "uuid",
+        "detail": "uuid",
         "documentation": {}
     },
     {
@@ -334,20 +344,19 @@
         "documentation": {}
     },
     {
+        "label": "SessionAuth",
+        "importPath": "api.v1.auth.session_auth",
+        "description": "api.v1.auth.session_auth",
+        "isExtraImport": true,
+        "detail": "api.v1.auth.session_auth",
+        "documentation": {}
+    },
+    {
         "label": "datetime",
         "importPath": "datetime",
         "description": "datetime",
         "isExtraImport": true,
         "detail": "datetime",
-        "documentation": {}
-    },
-    {
-        "label": "uuid",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "uuid",
-        "description": "uuid",
-        "detail": "uuid",
         "documentation": {}
     },
     {
@@ -390,7 +399,7 @@
         "kind": 6,
         "importPath": "api.v1.auth.session_auth",
         "description": "api.v1.auth.session_auth",
-        "peekOfCode": "class SessionAuth(Auth):\n    \"\"\"\n    session auth class\n    \"\"\"\n    pass",
+        "peekOfCode": "class SessionAuth(Auth):\n    \"\"\"\n    session auth class\n    \"\"\"\n    user_id_by_session_id = {}\n    def create_session(self, user_id: str = None) -> str:\n        \"\"\"\n        a method that creates a session id for a user_id\n        \"\"\"\n        if user_id is None or type(user_id) is not str:",
         "detail": "api.v1.auth.session_auth",
         "documentation": {}
     },
@@ -444,7 +453,7 @@
         "kind": 2,
         "importPath": "api.v1.views.users",
         "description": "api.v1.views.users",
-        "peekOfCode": "def view_one_user(user_id: str = '') -> str:\n    \"\"\" GET /api/v1/users/:id\n    Path parameter:\n      - User ID\n    Return:\n      - User object JSON represented\n      - 404 if the User ID doesn't exist\n    \"\"\"\n    if user_id == me:\n        if request.current_user is None:",
+        "peekOfCode": "def view_one_user(user_id: str = '') -> str:\n    \"\"\" GET /api/v1/users/:id\n    Path parameter:\n      - User ID\n    Return:\n      - User object JSON represented\n      - 404 if the User ID doesn't exist\n    \"\"\"\n    if user_id == 'me':\n        if request.current_user is None:",
         "detail": "api.v1.views.users",
         "documentation": {}
     },
@@ -472,15 +481,6 @@
         "importPath": "api.v1.views.users",
         "description": "api.v1.views.users",
         "peekOfCode": "def update_user(user_id: str = None) -> str:\n    \"\"\" PUT /api/v1/users/:id\n    Path parameter:\n      - User ID\n    JSON body:\n      - last_name (optional)\n      - first_name (optional)\n    Return:\n      - User object JSON represented\n      - 404 if the User ID doesn't exist",
-        "detail": "api.v1.views.users",
-        "documentation": {}
-    },
-    {
-        "label": "me",
-        "kind": 2,
-        "importPath": "api.v1.views.users",
-        "description": "api.v1.views.users",
-        "peekOfCode": "def me():\n    \"\"\"\n    retrieve the authenticated user\n    \"\"\"\n    user = request.current_user\n    return jsonify(user.to_dict())",
         "detail": "api.v1.views.users",
         "documentation": {}
     },
@@ -635,6 +635,105 @@
         "description": "main_0",
         "peekOfCode": "basic_clear = \"{}:{}\".format(user_email, user_clear_pwd)\nprint(\"Basic Base64: {}\".format(base64.b64encode(basic_clear.encode('utf-8')).decode(\"utf-8\")))",
         "detail": "main_0",
+        "documentation": {}
+    },
+    {
+        "label": "sa",
+        "kind": 5,
+        "importPath": "main_1",
+        "description": "main_1",
+        "peekOfCode": "sa = SessionAuth()\nprint(\"{}: {}\".format(type(sa.user_id_by_session_id), sa.user_id_by_session_id))\nuser_id = None\nsession = sa.create_session(user_id)\nprint(\"{} => {}: {}\".format(user_id, session, sa.user_id_by_session_id))\nuser_id = 89\nsession = sa.create_session(user_id)\nprint(\"{} => {}: {}\".format(user_id, session, sa.user_id_by_session_id))\nuser_id = \"abcde\"\nsession = sa.create_session(user_id)",
+        "detail": "main_1",
+        "documentation": {}
+    },
+    {
+        "label": "user_id",
+        "kind": 5,
+        "importPath": "main_1",
+        "description": "main_1",
+        "peekOfCode": "user_id = None\nsession = sa.create_session(user_id)\nprint(\"{} => {}: {}\".format(user_id, session, sa.user_id_by_session_id))\nuser_id = 89\nsession = sa.create_session(user_id)\nprint(\"{} => {}: {}\".format(user_id, session, sa.user_id_by_session_id))\nuser_id = \"abcde\"\nsession = sa.create_session(user_id)\nprint(\"{} => {}: {}\".format(user_id, session, sa.user_id_by_session_id))\nuser_id = \"fghij\"",
+        "detail": "main_1",
+        "documentation": {}
+    },
+    {
+        "label": "session",
+        "kind": 5,
+        "importPath": "main_1",
+        "description": "main_1",
+        "peekOfCode": "session = sa.create_session(user_id)\nprint(\"{} => {}: {}\".format(user_id, session, sa.user_id_by_session_id))\nuser_id = 89\nsession = sa.create_session(user_id)\nprint(\"{} => {}: {}\".format(user_id, session, sa.user_id_by_session_id))\nuser_id = \"abcde\"\nsession = sa.create_session(user_id)\nprint(\"{} => {}: {}\".format(user_id, session, sa.user_id_by_session_id))\nuser_id = \"fghij\"\nsession = sa.create_session(user_id)",
+        "detail": "main_1",
+        "documentation": {}
+    },
+    {
+        "label": "user_id",
+        "kind": 5,
+        "importPath": "main_1",
+        "description": "main_1",
+        "peekOfCode": "user_id = 89\nsession = sa.create_session(user_id)\nprint(\"{} => {}: {}\".format(user_id, session, sa.user_id_by_session_id))\nuser_id = \"abcde\"\nsession = sa.create_session(user_id)\nprint(\"{} => {}: {}\".format(user_id, session, sa.user_id_by_session_id))\nuser_id = \"fghij\"\nsession = sa.create_session(user_id)\nprint(\"{} => {}: {}\".format(user_id, session, sa.user_id_by_session_id))\nuser_id = \"abcde\"",
+        "detail": "main_1",
+        "documentation": {}
+    },
+    {
+        "label": "session",
+        "kind": 5,
+        "importPath": "main_1",
+        "description": "main_1",
+        "peekOfCode": "session = sa.create_session(user_id)\nprint(\"{} => {}: {}\".format(user_id, session, sa.user_id_by_session_id))\nuser_id = \"abcde\"\nsession = sa.create_session(user_id)\nprint(\"{} => {}: {}\".format(user_id, session, sa.user_id_by_session_id))\nuser_id = \"fghij\"\nsession = sa.create_session(user_id)\nprint(\"{} => {}: {}\".format(user_id, session, sa.user_id_by_session_id))\nuser_id = \"abcde\"\nsession = sa.create_session(user_id)",
+        "detail": "main_1",
+        "documentation": {}
+    },
+    {
+        "label": "user_id",
+        "kind": 5,
+        "importPath": "main_1",
+        "description": "main_1",
+        "peekOfCode": "user_id = \"abcde\"\nsession = sa.create_session(user_id)\nprint(\"{} => {}: {}\".format(user_id, session, sa.user_id_by_session_id))\nuser_id = \"fghij\"\nsession = sa.create_session(user_id)\nprint(\"{} => {}: {}\".format(user_id, session, sa.user_id_by_session_id))\nuser_id = \"abcde\"\nsession = sa.create_session(user_id)\nprint(\"{} => {}: {}\".format(user_id, session, sa.user_id_by_session_id))",
+        "detail": "main_1",
+        "documentation": {}
+    },
+    {
+        "label": "session",
+        "kind": 5,
+        "importPath": "main_1",
+        "description": "main_1",
+        "peekOfCode": "session = sa.create_session(user_id)\nprint(\"{} => {}: {}\".format(user_id, session, sa.user_id_by_session_id))\nuser_id = \"fghij\"\nsession = sa.create_session(user_id)\nprint(\"{} => {}: {}\".format(user_id, session, sa.user_id_by_session_id))\nuser_id = \"abcde\"\nsession = sa.create_session(user_id)\nprint(\"{} => {}: {}\".format(user_id, session, sa.user_id_by_session_id))",
+        "detail": "main_1",
+        "documentation": {}
+    },
+    {
+        "label": "user_id",
+        "kind": 5,
+        "importPath": "main_1",
+        "description": "main_1",
+        "peekOfCode": "user_id = \"fghij\"\nsession = sa.create_session(user_id)\nprint(\"{} => {}: {}\".format(user_id, session, sa.user_id_by_session_id))\nuser_id = \"abcde\"\nsession = sa.create_session(user_id)\nprint(\"{} => {}: {}\".format(user_id, session, sa.user_id_by_session_id))",
+        "detail": "main_1",
+        "documentation": {}
+    },
+    {
+        "label": "session",
+        "kind": 5,
+        "importPath": "main_1",
+        "description": "main_1",
+        "peekOfCode": "session = sa.create_session(user_id)\nprint(\"{} => {}: {}\".format(user_id, session, sa.user_id_by_session_id))\nuser_id = \"abcde\"\nsession = sa.create_session(user_id)\nprint(\"{} => {}: {}\".format(user_id, session, sa.user_id_by_session_id))",
+        "detail": "main_1",
+        "documentation": {}
+    },
+    {
+        "label": "user_id",
+        "kind": 5,
+        "importPath": "main_1",
+        "description": "main_1",
+        "peekOfCode": "user_id = \"abcde\"\nsession = sa.create_session(user_id)\nprint(\"{} => {}: {}\".format(user_id, session, sa.user_id_by_session_id))",
+        "detail": "main_1",
+        "documentation": {}
+    },
+    {
+        "label": "session",
+        "kind": 5,
+        "importPath": "main_1",
+        "description": "main_1",
+        "peekOfCode": "session = sa.create_session(user_id)\nprint(\"{} => {}: {}\".format(user_id, session, sa.user_id_by_session_id))",
+        "detail": "main_1",
         "documentation": {}
     }
 ]
