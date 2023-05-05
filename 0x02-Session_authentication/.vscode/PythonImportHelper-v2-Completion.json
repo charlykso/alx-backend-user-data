@@ -66,6 +66,30 @@
         "documentation": {}
     },
     {
+        "label": "abort",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
         "label": "Flask",
         "importPath": "flask",
         "description": "flask",
@@ -83,6 +107,22 @@
     },
     {
         "label": "abort",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
         "importPath": "flask",
         "description": "flask",
         "isExtraImport": true,
@@ -156,6 +196,14 @@
     },
     {
         "label": "TypeVar",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Tuple",
         "importPath": "typing",
         "description": "typing",
         "isExtraImport": true,
@@ -254,6 +302,30 @@
         "documentation": {}
     },
     {
+        "label": "User",
+        "importPath": "models.user",
+        "description": "models.user",
+        "isExtraImport": true,
+        "detail": "models.user",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "models.user",
+        "description": "models.user",
+        "isExtraImport": true,
+        "detail": "models.user",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "models.user",
+        "description": "models.user",
+        "isExtraImport": true,
+        "detail": "models.user",
+        "documentation": {}
+    },
+    {
         "label": "Auth",
         "importPath": "api.v1.auth.auth",
         "description": "api.v1.auth.auth",
@@ -284,6 +356,14 @@
         "importPath": "uuid",
         "description": "uuid",
         "detail": "uuid",
+        "documentation": {}
+    },
+    {
+        "label": "app_views",
+        "importPath": "api.v1.views",
+        "description": "api.v1.views",
+        "isExtraImport": true,
+        "detail": "api.v1.views",
         "documentation": {}
     },
     {
@@ -357,6 +437,14 @@
         "description": "flask_cors",
         "isExtraImport": true,
         "detail": "flask_cors",
+        "documentation": {}
+    },
+    {
+        "label": "SessionAuth",
+        "importPath": "api.v1.auth.session_auth",
+        "description": "api.v1.auth.session_auth",
+        "isExtraImport": true,
+        "detail": "api.v1.auth.session_auth",
         "documentation": {}
     },
     {
@@ -469,6 +557,15 @@
         "description": "api.v1.views.index",
         "peekOfCode": "def forbidden():\n    \"\"\"\n    testing 403 error handler\n    \"\"\"\n    abort(403)",
         "detail": "api.v1.views.index",
+        "documentation": {}
+    },
+    {
+        "label": "login",
+        "kind": 2,
+        "importPath": "api.v1.views.session_auth",
+        "description": "api.v1.views.session_auth",
+        "peekOfCode": "def login() -> Tuple[str, int]:\n    \"\"\"POST /api/v1/auth_session/login\n    Return:\n      - JSON representation of a User object.\n    \"\"\"\n    not_found_res = {\"error\": \"no user found for this email\"}\n    email = request.form.get('email')\n    if email is None or len(email.strip()) == 0:\n        return jsonify({\"error\": \"email missing\"}), 400\n    password = request.form.get('password')",
+        "detail": "api.v1.views.session_auth",
         "documentation": {}
     },
     {
@@ -955,6 +1052,87 @@
         "description": "main_3",
         "peekOfCode": "app = Flask(__name__)\n@app.route('/', methods=['GET'], strict_slashes=False)\ndef root_path():\n    \"\"\" Root path\n    \"\"\"\n    return \"Cookie value: {}\\n\".format(auth.session_cookie(request))\nif __name__ == \"__main__\":\n    app.run(host=\"0.0.0.0\", port=\"5000\")",
         "detail": "main_3",
+        "documentation": {}
+    },
+    {
+        "label": "root_path",
+        "kind": 2,
+        "importPath": "main_4",
+        "description": "main_4",
+        "peekOfCode": "def root_path():\n    \"\"\" Root path\n    \"\"\"\n    request_user = sa.current_user(request)\n    if request_user is None:\n        return \"No user found\\n\"\n    return \"User found: {}\\n\".format(request_user.id)\nif __name__ == \"__main__\":\n    app.run(host=\"0.0.0.0\", port=\"5000\")",
+        "detail": "main_4",
+        "documentation": {}
+    },
+    {
+        "label": "user_email",
+        "kind": 5,
+        "importPath": "main_4",
+        "description": "main_4",
+        "peekOfCode": "user_email = \"bobsession@hbtn.io\"\nuser_clear_pwd = \"fake pwd\"\nuser = User()\nuser.email = user_email\nuser.password = user_clear_pwd\nuser.save()\n\"\"\" Create a session ID \"\"\"\nsa = SessionAuth()\nsession_id = sa.create_session(user.id)\nprint(\"User with ID: {} has a Session ID: {}\".format(user.id, session_id))",
+        "detail": "main_4",
+        "documentation": {}
+    },
+    {
+        "label": "user_clear_pwd",
+        "kind": 5,
+        "importPath": "main_4",
+        "description": "main_4",
+        "peekOfCode": "user_clear_pwd = \"fake pwd\"\nuser = User()\nuser.email = user_email\nuser.password = user_clear_pwd\nuser.save()\n\"\"\" Create a session ID \"\"\"\nsa = SessionAuth()\nsession_id = sa.create_session(user.id)\nprint(\"User with ID: {} has a Session ID: {}\".format(user.id, session_id))\n\"\"\" Create a Flask app \"\"\"",
+        "detail": "main_4",
+        "documentation": {}
+    },
+    {
+        "label": "user",
+        "kind": 5,
+        "importPath": "main_4",
+        "description": "main_4",
+        "peekOfCode": "user = User()\nuser.email = user_email\nuser.password = user_clear_pwd\nuser.save()\n\"\"\" Create a session ID \"\"\"\nsa = SessionAuth()\nsession_id = sa.create_session(user.id)\nprint(\"User with ID: {} has a Session ID: {}\".format(user.id, session_id))\n\"\"\" Create a Flask app \"\"\"\napp = Flask(__name__)",
+        "detail": "main_4",
+        "documentation": {}
+    },
+    {
+        "label": "user.email",
+        "kind": 5,
+        "importPath": "main_4",
+        "description": "main_4",
+        "peekOfCode": "user.email = user_email\nuser.password = user_clear_pwd\nuser.save()\n\"\"\" Create a session ID \"\"\"\nsa = SessionAuth()\nsession_id = sa.create_session(user.id)\nprint(\"User with ID: {} has a Session ID: {}\".format(user.id, session_id))\n\"\"\" Create a Flask app \"\"\"\napp = Flask(__name__)\n@app.route('/', methods=['GET'], strict_slashes=False)",
+        "detail": "main_4",
+        "documentation": {}
+    },
+    {
+        "label": "user.password",
+        "kind": 5,
+        "importPath": "main_4",
+        "description": "main_4",
+        "peekOfCode": "user.password = user_clear_pwd\nuser.save()\n\"\"\" Create a session ID \"\"\"\nsa = SessionAuth()\nsession_id = sa.create_session(user.id)\nprint(\"User with ID: {} has a Session ID: {}\".format(user.id, session_id))\n\"\"\" Create a Flask app \"\"\"\napp = Flask(__name__)\n@app.route('/', methods=['GET'], strict_slashes=False)\ndef root_path():",
+        "detail": "main_4",
+        "documentation": {}
+    },
+    {
+        "label": "sa",
+        "kind": 5,
+        "importPath": "main_4",
+        "description": "main_4",
+        "peekOfCode": "sa = SessionAuth()\nsession_id = sa.create_session(user.id)\nprint(\"User with ID: {} has a Session ID: {}\".format(user.id, session_id))\n\"\"\" Create a Flask app \"\"\"\napp = Flask(__name__)\n@app.route('/', methods=['GET'], strict_slashes=False)\ndef root_path():\n    \"\"\" Root path\n    \"\"\"\n    request_user = sa.current_user(request)",
+        "detail": "main_4",
+        "documentation": {}
+    },
+    {
+        "label": "session_id",
+        "kind": 5,
+        "importPath": "main_4",
+        "description": "main_4",
+        "peekOfCode": "session_id = sa.create_session(user.id)\nprint(\"User with ID: {} has a Session ID: {}\".format(user.id, session_id))\n\"\"\" Create a Flask app \"\"\"\napp = Flask(__name__)\n@app.route('/', methods=['GET'], strict_slashes=False)\ndef root_path():\n    \"\"\" Root path\n    \"\"\"\n    request_user = sa.current_user(request)\n    if request_user is None:",
+        "detail": "main_4",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "main_4",
+        "description": "main_4",
+        "peekOfCode": "app = Flask(__name__)\n@app.route('/', methods=['GET'], strict_slashes=False)\ndef root_path():\n    \"\"\" Root path\n    \"\"\"\n    request_user = sa.current_user(request)\n    if request_user is None:\n        return \"No user found\\n\"\n    return \"User found: {}\\n\".format(request_user.id)\nif __name__ == \"__main__\":",
+        "detail": "main_4",
         "documentation": {}
     }
 ]
