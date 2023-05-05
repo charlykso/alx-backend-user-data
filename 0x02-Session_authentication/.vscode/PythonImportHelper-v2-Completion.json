@@ -564,7 +564,16 @@
         "kind": 2,
         "importPath": "api.v1.views.session_auth",
         "description": "api.v1.views.session_auth",
-        "peekOfCode": "def login() -> Tuple[str, int]:\n    \"\"\"POST /api/v1/auth_session/login\n    Return:\n      - JSON representation of a User object.\n    \"\"\"\n    not_found_res = {\"error\": \"no user found for this email\"}\n    email = request.form.get('email')\n    if email is None or len(email.strip()) == 0:\n        return jsonify({\"error\": \"email missing\"}), 400\n    password = request.form.get('password')",
+        "peekOfCode": "def login() -> Tuple[str, int]:\n    \"\"\"POST /api/v1/auth_session/login\n    Return:\n      - JSON representation of a User object.\n    \"\"\"\n    not_found_res = {\"error\": \"no user found for this email\"}\n    email = request.form.get('email')\n    password = request.form.get('password')\n    if not email:\n        return jsonify({\"error\": \"email missing\"}), 400",
+        "detail": "api.v1.views.session_auth",
+        "documentation": {}
+    },
+    {
+        "label": "logout",
+        "kind": 2,
+        "importPath": "api.v1.views.session_auth",
+        "description": "api.v1.views.session_auth",
+        "peekOfCode": "def logout() -> Tuple[str, int]:\n    \"\"\"DELETE /api/v1/auth_session/logout\n    Return:\n      - An empty JSON object.\n    \"\"\"\n    from api.v1.app import auth\n    is_destroyed = auth.destroy_session(request)\n    if not is_destroyed:\n        abort(404)\n    return jsonify({}), 200",
         "detail": "api.v1.views.session_auth",
         "documentation": {}
     },
