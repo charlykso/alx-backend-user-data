@@ -7,6 +7,8 @@ from sqlalchemy.orm.session import Session
 from typing import TypeVar
 from user import User
 from user import Base
+from sqlalchemy.orm.exc import NoResultFound
+from sqlalchemy.exc import InvalidRequestError
 
 
 class DB:
@@ -40,3 +42,19 @@ class DB:
         self._session.add(user)
         self._session.commit()
         return user
+
+    def find_user_by(self, **kwargs) -> User:
+        """Find a user in the database based on the given filter criteria.
+
+        :param kwargs: Keyword arguments specifying the filter criteria
+        :return: The first User object matching the filter criteria
+        :raises NoResultFound: If no results are found
+        :raises InvalidRequestError: If wrong query arguments are passed
+        """
+        try:
+            user = self._session.query(User).filter_by(**kwargs).first()
+            if not user:
+                raise NoResultFound()
+            return user
+        except InvalidRequestError as e:
+            raise e
