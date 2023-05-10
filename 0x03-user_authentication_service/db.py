@@ -9,6 +9,7 @@ from user import User
 from user import Base
 from sqlalchemy.orm.exc import NoResultFound
 from sqlalchemy.exc import InvalidRequestError
+import bcrypt
 
 
 class DB:
@@ -58,3 +59,26 @@ class DB:
             return user
         except InvalidRequestError as e:
             raise e
+
+    def update_user(self, user_id: int, **kwargs) -> None:
+        """Update a user in the database based on the given
+        user_id and attribute values.
+
+        :param user_id: The ID of the user to update
+        :param kwargs: Keyword arguments specifying the new attribute values
+        :return: None
+        :raises NoResultFound: If no user is found with the given user_id
+        :raises ValueError: If an argument that does not correspond
+        to a user attribute is passed
+        """
+        try:
+            user = self.find_user_by(id=user_id)
+        except NoResultFound as e:
+            raise e
+
+        for attr, value in kwargs.items():
+            if hasattr(user, attr):
+                setattr(user, attr, value)
+            else:
+                raise ValueError()
+        self._session.commit()
