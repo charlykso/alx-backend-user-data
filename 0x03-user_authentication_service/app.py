@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """app file"""
 
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, abort, redirect
 from auth import Auth
 from typing import Tuple, Union
 
@@ -32,6 +32,17 @@ def register_user() -> Tuple[str, int]:
     except ValueError:
         response_msg = {"message": "email already registered"}
         return jsonify(response_msg), 400
+
+
+@app.route('/session', methods=['DELETE'], strict_slashes=False)
+def logout() -> Union[abort, redirect]:
+    """logout user"""
+    session_id = request.cookies.get('session_id')
+    user = AUTH.get_user_from_session_id(session_id)
+    if session_id is None or user is None:
+        abort(403)
+    AUTH.destroy_session(user.id)
+    return redirect('/')  
 
 
 if __name__ == "__main__":
