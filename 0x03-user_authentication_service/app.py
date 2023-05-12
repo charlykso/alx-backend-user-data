@@ -77,7 +77,7 @@ def get_reset_password_token() -> Union[str, abort]:
     """get reset password token"""
     email = request.form.get('email')
     try:
-        reset_token = AUTH.get_reset_password_token(email=email)
+        reset_token = AUTH.get_reset_password_token(email=str(email))
     except ValueError:
         abort(403)
 
@@ -91,7 +91,8 @@ def update_password() -> str:
     reset_token = request.form.get('reset_token')
     new_password = request.form.get('new_password')
     try:
-        AUTH.update_password(reset_token, new_password)
+        AUTH.update_password(reset_token=str(reset_token),
+                             password=str(new_password))
     except Exception:
         abort(403)
     return jsonify({"email": email, "message": "Password updated"}), 200
