@@ -66,10 +66,9 @@ class Auth:
         :return: the sessionId created
         """
         try:
-            user = self._db.find_user_by(email=email)
-            user.session_id = _generate_uuid()
-            self._db.update_user(user_id=user.id,
-                                 session_id=user.session_id)
-            return user.session_id
+            found_user = self._db.find_user_by(email=email)
         except NoResultFound:
             return None
+        session_id = _generate_uuid()
+        self._db.update_user(user_id=found_user.id, session_id=session_id)
+        return session_id
