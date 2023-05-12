@@ -6,6 +6,7 @@ import bcrypt
 from db import DB
 from user import User
 from sqlalchemy.orm.exc import NoResultFound
+from sqlalchemy.exc import InvalidRequestError
 
 
 def _hash_password(password: str) -> bytes:
@@ -53,14 +54,11 @@ class Auth:
         """
         try:
             user = self._db.find_user_by(email=email)
-        except NoResultFound:
+        except (NoResultFound, InvalidRequestError):
             return False
-        user_password = user.hashed_password
-        encoded_password = password.encode('utf-8')
+        hashed_password = user.hashed_password.encode('utf-8')
 
-        if bcrypt.checkpw(encoded_password, user_password):
-            return True
-        return False
+        return bcrypt.checkpw(password.encode('utf-8'), hashed_password)
 
     def create_session(self, email: str) -> str:
         """create a sessionId and store it in the db
